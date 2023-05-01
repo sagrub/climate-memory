@@ -1,4 +1,4 @@
-/* general rules */
+/* general styling */
 html {
     box-sizing: border-box;
 }
@@ -11,4 +11,12 @@ html {
     margin: 0;
     padding: 0;
     border: none;
+}
+
+body{
+    background: url(../images/hero_2000px.webp) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
 }
