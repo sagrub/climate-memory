@@ -39,4 +39,10 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
 
 ## References
 
+### Resources
+
+[Pop Up Windows](https://www.youtube.com/watch?v=MBaw_6cPmAw)
+[JavaScript DOM Manipulation](https://www.youtube.com/watch?v=5fb2aPlgoys)
+[Code with Mosh](https://codewithmosh.com/p/ultimate-javascript-series)
+
 ## Acknowledgements
