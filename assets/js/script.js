@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded',function(){
                 alert(`Open ${buttonType}` );
             }
             else if(buttonType === 'btn-open-story'){
-                alert(`Open ${buttonType}`);
+                openModal('modal-story');
+                MakeBackgroundDark();
             }
             else if(buttonType === 'btn-close'){
                 closeModal();
