@@ -56,6 +56,11 @@ h1,h2,h2 {
     cursor: pointer;
 }
 
+.btn:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+
 .btn--primary{
     background-color: var(--primary-light-color);
 }
@@ -71,7 +76,12 @@ h1,h2,h2 {
     display: block;
     box-shadow: none;
     background-color: var(--secondary-light-color);
-    margin-right: 10px;
+    margin: 5px 10px 0 0;
+}
+
+.btn--close:hover{
+    transform: scale(1.2);
+    font-weight: bold;
 }
 
 
