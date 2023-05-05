@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded',function(){
             }
             else if(buttonType === 'btn-close'){
                 closeModal();
-                MakeBackgroundLight();
+                MakeBackgroundNormal();
             }
             else{
                 console.log('not implemented');
@@ -32,13 +32,19 @@ document.addEventListener('DOMContentLoaded',function(){
     
 })
 
+/**
+ * Open a pop up window based on the passed id, by additing the active class
+ */
 function openModal(modalId){
     let modal = document.getElementById(modalId);
     if (modal == null) return
     modal.classList.add('active');
 }
 
-function closeModal(modalId){
+/**
+ * Close any pop up window with a class modal
+ */
+function closeModal(){
     let modals = document.getElementsByClassName('modal');
     for (let modal of modals){
         if (modal == null) return
@@ -46,12 +52,21 @@ function closeModal(modalId){
     }
 }
 
+
+/**
+ * Make the bakcground darker, used in case if the popup
+ * window gets active.
+ */
 function MakeBackgroundDark(){
     let overlay = document.querySelector('#overlay');
     overlay.classList.add('active');
 }
 
-function MakeBackgroundLight(){
+/**
+ * Put the background into the previouse stage, used in case
+ * the pop-up window is inactive
+ */
+function MakeBackgroundNormal(){
     let overlay = document.querySelector('#overlay');
     overlay.classList.remove('active');
 }
