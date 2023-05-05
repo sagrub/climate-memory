@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 MakeBackgroundDark();
             }
             else if(buttonType === 'btn-open-play'){
-                alert(`Open ${buttonType}` );
+                window.location = "https://brodsa.github.io/climate-memory/game.html"
             }
             else if(buttonType === 'btn-open-story'){
                 openModal('modal-story');
