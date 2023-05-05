@@ -27,18 +27,18 @@
             </p>
 
             <div class="buttons">
-                <button class="btn btn--secondary">How to play</button>
-                <button class="btn btn--primary">Start game</button>
-                <button class="btn btn--secondary">Story behind</button>
+                <button data-bth="btn-open-how-to" class="btn btn--secondary">How to play</button>
+                <button data-bth="btn-open-play" class="btn btn--primary">Start game</button>
+                <button data-bth="btn-open-story" class="btn btn--secondary">Story behind</button>
             </div>
 
         </div>
 
     </div>
 
-    <div class="modal">
+    <div class="modal" id="modal-how-to">
         <div class="modal__header">
-            <button class="btn btn--close">&times;</button>
+            <button data-btn="btn-close" class="btn btn--close">&times;</button>
             <h2 class="modal__title">How to play</h2>
         </div>
        
@@ -49,10 +49,12 @@
             </p>
 
             <div class="buttons">
-                <button class="btn btn--primary">Start game</button>
+                <button data-bth="btn-open-play" class="btn btn--primary">Start game</button>
             </div>
         </div>
     </div>
     <div id="overlay"></div>
+
+    <script type="module" src="./assets/js/script.js"></script>
 </body>
 </html>
