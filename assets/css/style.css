@@ -27,7 +27,6 @@ html {
 body{
     background: url(../images/background_2000px.webp) no-repeat center center/cover;
     height: 100vh;
-    display:relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
