@@ -190,12 +190,43 @@ h1,h2,h2 {
     justify-content: center;
 }
 
+/* code inspiration for the css style of card, card__front, card__back
+from the website 
+https://webtips.dev/memory-game-in-javascript?utm_content=cmp-true */
 .card{
     width: 4rem;
     height: 4rem;
-    background-color: gold;
+    position:relative;
 }
 
+.card__front,
+.card__back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .6s;
+    backface-visibility: hidden;
+}
+
+.card__front{
+    background-color: var(--primary-color);
+}
+
+.card__back{
+    background-color: var(--secondary-color);
+    /* transform: rotateY(180deg) rotateZ(10deg); */
+    user-select:none;
+}
+
+.card__front:hover{
+    transform: rotateY(180deg) rotateZ(10deg);
+}
+
+.card__back:hover{
+    transform: rotateY(-180deg) rotateZ(-10deg);
+}
 
 @media screen and (min-width:350px){
     .game__board{

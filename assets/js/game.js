@@ -9,9 +9,13 @@ function generateBoard(){
     
         card.classList.add('card');
         cardFront.classList.add('card__front');
+        cardFront.innerText = 'Test'
         cardBack.classList.add('card__back');
 
         gameBoard.append(card);
+        card.append(cardFront);
+        card.append(cardBack);
+        
     }
 }
 generateBoard()
