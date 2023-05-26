@@ -44,19 +44,21 @@ function generateBoard(numOfCards=12){
         const cardFront = document.createElement('div');
         const cardBack = document.createElement('div');
         const gameModal = document.createElement('div');
+        let cardContent = cardsData[i]
     
         card.classList.add('card');
+        card.dataset.id = cardContent.id;
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
         gameModal.classList.add('game__modal');
         
 
-        let cardContent = cardsData[i]
-        if (cardContent["type"]==="txt") {
+        
+        if (cardContent.type==="txt") {
             cardFront.innerText = cardContent.text;
             gameModal.innerText = cardContent.text;
         }       
-        else if (cardContent["type"]==="img"){
+        else if (cardContent.type==="img"){
             cardFront.innerText = cardContent.img;
             gameModal.innerText = cardContent.img;
         }else{
@@ -73,30 +75,35 @@ function generateBoard(numOfCards=12){
 generateBoard();
 
 
+const cards = document.querySelectorAll(".card");
+cards.forEach(card => card.addEventListener('click',flipCard));
+
+let flippedCard = false;
+let firstCard;
+let secondCard;
+
+function flipCard(){
+    this.classList.add('flip');
+
+    if(!flippedCard){
+        // the first card has fliped
+        flippedCard = true;
+        firstCard = this;
+        console.log('fliped first', firstCard);
+    }else{
+        // the second card has fliped
+        flippedCard = false;
+        secondCard = this;
+        console.log('fliped second',secondCard);
+
+        // checked 
+        if(firstCard.dataset.id,secondCard.dataset.id){
+            console.log('match, leave flipped')
+        }else{
+            console.log('no match, flip back')
+        }
+    }
+    
+}
 
 
-
-
-
-
-
-
-
-
-// const shuffledCards = () => {
-//     // get the data using fetch - code from the slack CI community
-//     fetch("assets/data/data.json")
-//     .then(res => res.json())
-//     .then(data => {
-//         // https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
-//         const shuffledData = data.sort(() => 0.5 - Math.random());
-//         const selectedData = shuffledData.slice(0,6);
-//         console.log(selectedData);
-//         return selectedData;
-//     }
-//     )
-// }
-
-
-// import data from '../data/data.json' assert { type: 'json' };
-// console.log(data);
