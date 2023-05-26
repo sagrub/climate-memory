@@ -47,7 +47,7 @@ function openModal(modalId){
 function closeModal(){
     const modals = document.getElementsByClassName('modal');
     for (let modal of modals){
-        if (modal == null) return
+        if (modal == null) return;
         modal.classList.remove('active');
     }
 }

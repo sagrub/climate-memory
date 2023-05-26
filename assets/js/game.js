@@ -5,8 +5,6 @@ const data = await fetch("assets/data/data.json").then(res => res.json());
  * Select random cards based on the given number of pairs (numOfCards). 
  * For the game, the numOfCards stays fixed.
  * Returns an object of 6 card pairs (6 images and 6 text).
- * @param {*} numOfCards 
- * @returns 
  */
 
 const selectRandomCards = (numOfPairs=6) => {
@@ -31,6 +29,11 @@ const selectRandomCards = (numOfPairs=6) => {
     return shuffledData;
 }
 
+/**
+ * Generate the board layout and content for 
+ * the given number of cards (see electRandomCards())
+ * 
+ */
 
 function generateBoard(numOfCards=12){
     const gameBoard = document.querySelector(".game__board");
@@ -40,17 +43,22 @@ function generateBoard(numOfCards=12){
         const card = document.createElement('div');
         const cardFront = document.createElement('div');
         const cardBack = document.createElement('div');
+        const gameModal = document.createElement('div');
     
         card.classList.add('card');
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
+        gameModal.classList.add('game__modal');
+        
 
         let cardContent = cardsData[i]
         if (cardContent["type"]==="txt") {
             cardFront.innerText = cardContent.text;
+            gameModal.innerText = cardContent.text;
         }       
         else if (cardContent["type"]==="img"){
             cardFront.innerText = cardContent.img;
+            gameModal.innerText = cardContent.img;
         }else{
             console.log('not implemented for such type')
         }
@@ -58,6 +66,7 @@ function generateBoard(numOfCards=12){
         gameBoard.append(card);
         card.append(cardFront);
         card.append(cardBack);
+        gameBoard.append(gameModal);
         
     }
 }
