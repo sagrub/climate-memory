@@ -1,59 +1,46 @@
 [
     {
         "id": 1,
-        "info": {
-            "img": "src 1",
-            "text": "text 1"
-        }
+        "img": "src 1",
+        "text": "text 1"
     },
     {
         "id": 2,
-        "info": {
-            "img": "src 2",
-            "text": "text 2"
-        }
+        "img": "src 2",
+        "text": "text 2"
+ 
     },
     {
         "id": 3,
-        "info": {
-            "img": "src 3",
-            "text": "text 3"
-        }
+         "img": "src 3",
+        "text": "text 3"
     },
     {
         "id": 4,
-        "info": {
-            "img": "src 4",
-            "text": "text 4"
-        }
+        "img": "src 4",
+        "text": "text 4"
+
     },
     {
         "id": 5,
-        "info": {
-            "img": "src 5",
-            "text": "text 5"
-        }
+        "img": "src 5",
+        "text": "text 5"
+
     },
     {
         "id": 6,
-        "info": {
-            "img": "src 6",
-            "text": "text 6"
-        }
+        "img": "src 6",
+        "text": "text 6"
     },
     {
         "id": 7,
-        "info": {
-            "img": "src 7",
-            "text": "text 7"
-        }
+        "img": "src 7",
+        "text": "text 7"
     },
     {
         "id": 8,
-        "info": {
-            "img": "src 8",
-            "text": "text 8"
-        }
+        "img": "src 8",
+        "text": "text 8"
     }
     
 ]
