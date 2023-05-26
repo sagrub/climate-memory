@@ -47,10 +47,10 @@ function generateBoard(numOfCards=12){
 
         let cardContent = cardsData[i]
         if (cardContent["type"]==="txt") {
-            cardBack.innerText = cardContent.text;
+            cardFront.innerText = cardContent.text;
         }       
         else if (cardContent["type"]==="img"){
-            cardBack.innerText = cardContent.img;
+            cardFront.innerText = cardContent.img;
         }else{
             console.log('not implemented for such type')
         }
