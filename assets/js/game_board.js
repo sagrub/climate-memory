@@ -12,6 +12,7 @@ const selectRandomCards = (numOfPairs=6) => {
     const shuffledCards = data.sort(() => 0.5 - Math.random());
     const selectedBasis = shuffledCards.slice(0,numOfPairs);
 
+    // add the type of the card
     const selectedImg = []
     const selectedTxt = []
     for(let item of selectedBasis){
@@ -23,6 +24,7 @@ const selectRandomCards = (numOfPairs=6) => {
         selectedImg.push(element);
     }
     
+    // put img cards and txt cards together and shuffle the array again
     const shuffled = selectedTxt.concat(selectedImg)
     const shuffledData = shuffled.sort(() => 0.5 - Math.random());
     console.log(shuffledData);
@@ -35,7 +37,7 @@ const selectRandomCards = (numOfPairs=6) => {
  * 
  */
 
-function generateBoard(numOfCards=12){
+const generateBoard = (numOfCards=12) => {
     const gameBoard = document.querySelector(".game__board");
     const cardsData = selectRandomCards();
 
@@ -45,15 +47,17 @@ function generateBoard(numOfCards=12){
         const cardBack = document.createElement('div');
         const gameModal = document.createElement('div');
         let cardContent = cardsData[i]
-    
+        
+        // create the divs for cards
         card.classList.add('card');
-        card.dataset.id = cardContent.id;
+        card.dataset.key = cardContent.id;
+        card.id = `card-${i}`;
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
         gameModal.classList.add('game__modal');
+        gameModal.id = `modal-${i}`;
         
-
-        
+        // add the content to the cards based on the type
         if (cardContent.type==="txt") {
             cardFront.innerText = cardContent.text;
             gameModal.innerText = cardContent.text;
@@ -62,7 +66,7 @@ function generateBoard(numOfCards=12){
             cardFront.innerText = cardContent.img;
             gameModal.innerText = cardContent.img;
         }else{
-            console.log('not implemented for such type')
+            console.log('not implemented for such type');
         }
 
         gameBoard.append(card);
@@ -71,36 +75,52 @@ function generateBoard(numOfCards=12){
         gameBoard.append(gameModal);
         
     }
-}
+};
+
 generateBoard();
 
 
 const cards = document.querySelectorAll(".card");
 cards.forEach(card => card.addEventListener('click',flipCard));
 
-let flippedCard = false;
+let flipedCard = false;
 let firstCard;
 let secondCard;
 
+function showModal(){
+    this.classList.toggle('active');
+    console.log('active');
+}
+
+// https://www.youtube.com/watch?v=ZniVgo8U7ek
 function flipCard(){
     this.classList.add('flip');
 
-    if(!flippedCard){
+    if(!flipedCard){
         // the first card has fliped
-        flippedCard = true;
+        flipedCard = true;
         firstCard = this;
         console.log('fliped first', firstCard);
     }else{
         // the second card has fliped
-        flippedCard = false;
+        flipedCard = false;
         secondCard = this;
         console.log('fliped second',secondCard);
 
         // checked 
-        if(firstCard.dataset.id,secondCard.dataset.id){
-            console.log('match, leave flipped')
+        if(firstCard.id == secondCard.id){
+            firstCard.classList.remove('flip');
+        }else if(firstCard.dataset.key === secondCard.dataset.key){
+            firstCard.removeEventListener('click',flipCard);
+            secondCard.removeEventListener('click',flipCard);
+            console.log('match, leave flipped');
         }else{
-            console.log('no match, flip back')
+            setTimeout(() => {
+                firstCard.classList.remove('flip');
+                secondCard.classList.remove('flip');
+                console.log('no match, flip back');
+            }, 1000);
+            
         }
     }
     
