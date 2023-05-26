@@ -45,6 +45,15 @@ function generateBoard(numOfCards=12){
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
 
+        let cardContent = cardsData[i]
+        if (cardContent["type"]==="txt") {
+            cardBack.innerText = cardContent.text;
+        }       
+        else if (cardContent["type"]==="img"){
+            cardBack.innerText = cardContent.img;
+        }else{
+            console.log('not implemented for such type')
+        }
 
         gameBoard.append(card);
         card.append(cardFront);
