@@ -97,13 +97,7 @@ console.log(freezBoard);
 function flipCard(){
     if (freezBoard) return;
     this.classList.add('flip');
-    cardsModal.classList.add('active');
-
-    setTimeout(()=>{
-        cardsModal.classList.remove('active');
-    },2000);
-
-    console.log('modal');
+    showCardsModal(this);
 
     if(!flipedCard){
         // the first card has fliped
@@ -119,6 +113,17 @@ function flipCard(){
     totalFlips++;
     displayFlips();
     
+}
+
+function showCardsModal(obj){
+    console.log(obj);
+    setTimeout(()=>{
+        cardsModal.classList.add('active');
+    },800);
+
+    setTimeout(()=>{
+        cardsModal.classList.remove('active');
+    },2000);
 }
 
 function checkCardsMatch(){
@@ -149,7 +154,7 @@ function flipCardsBack(){
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         freezBoard = false;
-    }, 2000);
+    }, 2050);
 }
 
 
