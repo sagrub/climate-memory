@@ -7,6 +7,7 @@ let firstCard;
 let secondCard;
 
 let totalFlips = 0;
+let correctFlips = 0;
 
 function showModal(){
     this.classList.toggle('active');
@@ -22,15 +23,12 @@ function flipCard(){
         // the first card has fliped
         flipedCard = true;
         firstCard = this;
-        console.log('fliped first', firstCard);
     }else{
         // the second card has fliped
         flipedCard = false;
         secondCard = this;
-        console.log('fliped second',secondCard);
-
         // check for match 
-        checkCardsMatch()
+        checkCardsMatch();
     }
     totalFlips++;
     displayFlips();
@@ -44,11 +42,14 @@ function checkCardsMatch(){
         totalFlips--;
     // if clicked on the matched card
     }else if(firstCard.dataset.key === secondCard.dataset.key){
-        keepCardsFliped();   
+        keepCardsFliped();  
+        correctFlips++;
+        console.log(correctFlips);
     // no match
     }else{
         flipCardsBack();  
     }
+    showWinBoard();
     
 };
 
@@ -65,6 +66,7 @@ function flipCardsBack(){
         freezBoard = false;
     }, 1000);
 }
+
 
 /**
  * Display the number of fliped card
@@ -86,3 +88,14 @@ setInterval(function(){
     let minutes = (Math.floor(timeSecond / 60)).toString().padStart(2,'0');
     textTime.innerText = `${minutes}:${seconds}`
 },1500);
+
+
+/**
+ * Display win board
+ */
+function showWinBoard(){
+    const totalNumberCards = cards.length / 2;
+    const winBoard = document.querySelector(".win-board");
+    console.log(winBoard.classList);
+    totalNumberCards === correctFlips ? winBoard.classList.add('active') : winBoard.classList.remove('active');
+}

@@ -206,7 +206,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     transition: transform .5s;
 }
 
-.game__modal{
+.game__modal, .win-board{
     position: fixed;
     top: 50%;
     left: 50%;
@@ -221,7 +221,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     width: 40%;
 }
 
-.game__modal.active{
+.game__modal.active, .win-board.active{
     transform: translate(-50%,-50%) scale(1);
 }
 
@@ -250,6 +250,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 .card__back{
     background-color: var(--secondary-color);
 }
+
 
 
 
