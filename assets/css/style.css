@@ -71,11 +71,10 @@ h1,h2,h2 {
 .btn--close{
     font-size: 2rem;
     width: auto;
-    padding: 5px;
     display: block;
     box-shadow: none;
     background-color: var(--secondary-light-color);
-    margin: 5px 10px 0 0;
+    margin: 7px 10px 0 0;
 }
 
 .btn--close:hover{

@@ -1,12 +1,12 @@
 // get the data using fetch function from the slack CI community
 const data = await fetch("assets/data/data.json").then(res => res.json());
 
+
 /**
  * Select random cards based on the given number of pairs (numOfCards). 
  * For the game, the numOfCards stays fixed.
  * Returns an object of 6 card pairs (6 images and 6 text).
  */
-
 const selectRandomCards = (numOfPairs=6) => {
     // shuffle the array elements from https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
     const shuffledCards = data.sort(() => 0.5 - Math.random());
@@ -31,12 +31,12 @@ const selectRandomCards = (numOfPairs=6) => {
     return shuffledData;
 }
 
+
 /**
  * Generate the board layout and content for 
  * the given number of cards (see electRandomCards())
  * 
  */
-
 const generateBoard = (numOfCards=12) => {
     const gameBoard = document.querySelector(".game__board");
     const cardsData = selectRandomCards();
@@ -46,11 +46,10 @@ const generateBoard = (numOfCards=12) => {
         const cardFront = document.createElement('div');
         const cardBack = document.createElement('div');
         const gameModal = document.createElement('div');
-        let cardContent = cardsData[i]
         
-        // create the divs for cards
+        // add attributes and classes
         card.classList.add('card');
-        card.dataset.key = cardContent.id;
+        card.dataset.key = cardsData[i].id;
         card.id = `card-${i}`;
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
@@ -58,13 +57,13 @@ const generateBoard = (numOfCards=12) => {
         gameModal.id = `modal-${i}`;
         
         // add the content to the cards based on the type
-        if (cardContent.type==="txt") {
-            cardFront.innerText = cardContent.text;
-            gameModal.innerText = cardContent.text;
+        if (cardsData[i].type==="txt") {
+            cardFront.innerText = cardsData[i].text;
+            gameModal.innerText = cardsData[i].text;
         }       
-        else if (cardContent.type==="img"){
-            cardFront.innerText = cardContent.img;
-            gameModal.innerText = cardContent.img;
+        else if (cardsData[i].type==="img"){
+            cardFront.innerText = cardsData[i].img;
+            gameModal.innerText = cardsData[i].img;
         }else{
             console.log('not implemented for such type');
         }
