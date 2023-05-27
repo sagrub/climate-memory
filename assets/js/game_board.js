@@ -83,6 +83,7 @@ const cards = document.querySelectorAll(".card");
 cards.forEach(card => card.addEventListener('click',flipCard));
 
 let flipedCard = false;
+let freezBoard = false;
 let firstCard;
 let secondCard;
 
@@ -91,8 +92,9 @@ function showModal(){
     console.log('active');
 }
 
-// https://www.youtube.com/watch?v=ZniVgo8U7ek
+// code inspiration from https://www.youtube.com/watch?v=ZniVgo8U7ek
 function flipCard(){
+    if (freezBoard) return;
     this.classList.add('flip');
 
     if(!flipedCard){
@@ -106,23 +108,37 @@ function flipCard(){
         secondCard = this;
         console.log('fliped second',secondCard);
 
-        // checked 
-        if(firstCard.id == secondCard.id){
-            firstCard.classList.remove('flip');
-        }else if(firstCard.dataset.key === secondCard.dataset.key){
-            firstCard.removeEventListener('click',flipCard);
-            secondCard.removeEventListener('click',flipCard);
-            console.log('match, leave flipped');
-        }else{
-            setTimeout(() => {
-                firstCard.classList.remove('flip');
-                secondCard.classList.remove('flip');
-                console.log('no match, flip back');
-            }, 1000);
-            
-        }
+        // check for match 
+        checkMatch()
     }
     
 }
 
+function checkMatch(){
+    //if clicked on the same card
+    if(firstCard.id === secondCard.id){
+        firstCard.classList.remove('flip');
+    // if clicked on the matched card
+    }else if(firstCard.dataset.key === secondCard.dataset.key){
+        keepFliped();
+    // no match
+    }else{
+        backFliped();
+    }
+};
 
+function keepFliped(){
+    firstCard.removeEventListener('click',flipCard);
+    secondCard.removeEventListener('click',flipCard);
+    console.log('match, leave flipped');
+}
+
+function backFliped(){
+    freezBoard = true;
+    setTimeout(() => {
+        firstCard.classList.remove('flip');
+        secondCard.classList.remove('flip');
+        console.log('no match, flip back');
+        freezBoard = false;
+    }, 1000);
+}
