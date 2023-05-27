@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 MakeBackgroundDark();
             }
             else if(buttonType === 'btn-open-play'){
-                window.location = "https://brodsa.github.io/climate-memory/game.html";
+                window.location.href = "game.html";;
             }
             else if(buttonType === 'btn-open-story'){
                 openModal('modal-story');
@@ -25,10 +25,10 @@ document.addEventListener('DOMContentLoaded',function(){
                 MakeBackgroundNormal();
             }
             else if(buttonType === 'btn-go-back'){
-                window.location = "https://brodsa.github.io/climate-memory/index.html";
+                window.location.href = "index.html";
             }
             else if(buttonType === 'btn-reset-play'){
-                window.location = "https://brodsa.github.io/climate-memory/game.html";
+                window.location.href = "game.html";
             }
             else{
                 console.log('not implemented');

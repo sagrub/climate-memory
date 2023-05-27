@@ -77,5 +77,3 @@ const generateBoard = (numOfCards=12) => {
 };
 
 generateBoard();
-
-

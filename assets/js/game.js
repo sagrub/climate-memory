@@ -1,5 +1,3 @@
-console.log('hi');
-
 const cards = document.querySelectorAll(".card");
 cards.forEach(card => card.addEventListener('click',flipCard));
 
@@ -57,7 +55,6 @@ function checkCardsMatch(){
 function keepCardsFliped(){
     firstCard.removeEventListener('click',flipCard);
     secondCard.removeEventListener('click',flipCard);
-    console.log('match, leave flipped');
 }
 
 function flipCardsBack(){
@@ -65,21 +62,27 @@ function flipCardsBack(){
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        console.log('no match, flip back');
         freezBoard = false;
     }, 1000);
 }
 
+/**
+ * Display the number of fliped card
+ */
 function displayFlips(){
     let textFlips = document.getElementById('total-flips');
-    console.log(totalFlips);
     textFlips.innerText = `${totalFlips}`;
 }
 
-// let timeSecond = 0;
-// const textTime = document.getElementById('total-time');
-// textTime.innerText = `00:${textTime}`;
+/**
+ * Display the timer
+ */
+let timeSecond = 0;
+const textTime = document.getElementById('total-time');
 
-// const countUp = setInterval(() =>{
-//     timeSecond++;
-// },10000)
+setInterval(function(){
+    timeSecond++;
+    let seconds = (timeSecond % 60).toString().padStart(2,'0');
+    let minutes = (Math.floor(timeSecond / 60)).toString().padStart(2,'0');
+    textTime.innerText = `${minutes}:${seconds}`
+},1500);
