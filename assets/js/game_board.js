@@ -53,17 +53,13 @@ const generateBoard = (numOfCards=12) => {
         card.id = `card-${i}`;
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
-        // cardModal.classList.add('card__modal');
-        // card.id = `modal-${i}`;
         
         // add the content to the cards based on the type
         if (cardsData[i].type==="txt") {
             cardFront.innerText = cardsData[i].text;
-            // cardModal.innerText = cardsData[i].text;
         }       
         else if (cardsData[i].type==="img"){
-            cardFront.innerText = cardsData[i].img;
-            // cardModal.innerText = cardsData[i].img;
+            cardFront.innerHTML = `<img src="${cardsData[i].img}">` ;
         }else{
             console.log('not implemented for such type');
         }
