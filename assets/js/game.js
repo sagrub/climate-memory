@@ -9,15 +9,27 @@ let secondCard;
 let totalFlips = 0;
 let correctFlips = 0;
 
-function showModal(){
-    this.classList.toggle('active');
-    console.log('active');
-}
+
+console.log(freezBoard);
 
 // code inspiration from https://www.youtube.com/watch?v=ZniVgo8U7ek
 function flipCard(){
     if (freezBoard) return;
     this.classList.add('flip');
+
+    // this.classList.add('active');
+    // this.lastChild.classList.add('active');
+    // console.log(this.lastChild.classList);
+
+    // setTimeout(()=>{
+        
+    // },1000);
+
+    // setTimeout(()=>{
+    //     this.lastChild.classList.remove('active');
+    // },1000);
+
+    console.log('modal');
 
     if(!flipedCard){
         // the first card has fliped
@@ -44,12 +56,11 @@ function checkCardsMatch(){
     }else if(firstCard.dataset.key === secondCard.dataset.key){
         keepCardsFliped();  
         correctFlips++;
-        console.log(correctFlips);
     // no match
     }else{
         flipCardsBack();  
     }
-    showWinBoard();
+    // showWinBoard();
     
 };
 
@@ -94,25 +105,27 @@ getTime;
 /**
  * Display win board
  */
-function showWinBoard(){
-    const totalNumberCards = cards.length / 2;
-    const winBoard = document.querySelector(".win-board");
-    const winBoardTime = document.querySelector("#win-board__time");
-    const winBoardFlips = document.querySelector("#win-board__flips");
+// function showWinBoard(){
+//     const totalNumberCards = cards.length / 2;
+//     const winBoard = document.querySelector(".win-board");
+//     const winBoardTime = document.querySelector("#win-board__time");
+//     const winBoardFlips = document.querySelector("#win-board__flips");
 
     
-    if (totalNumberCards === correctFlips){
-        clearInterval(getTime);
-        const time = document.querySelector("#total-time").innerText;
-        const flips = document.querySelector("#total-flips").innerText;
+//     if (totalNumberCards === correctFlips){
+//         clearInterval(getTime);
+//         const time = document.querySelector("#total-time").innerText;
+//         const flips = document.querySelector("#total-flips").innerText;
         
-        winBoardTime.innerText = time;
-        winBoardFlips.innerText = flips;
+//         winBoardTime.innerText = time;
+//         winBoardFlips.innerText = flips;
 
-        winBoard.classList.add('active');
-        setTimeout(() => {
-            winBoard.classList.remove('active')
-        },3000);
-    }
-    ;
-}
+//         winBoard.classList.add('active');
+//         setTimeout(() => {
+//             winBoard.classList.remove('active')
+//         },3000);
+//     }
+//     ;
+// }
+
+

@@ -1,41 +1,36 @@
-/**
- * Wait for the DOM to be loaded
- * Add event listeners for the buttons
- */
-document.addEventListener('DOMContentLoaded',function(){
-    const buttons = document.querySelectorAll('button');
+const buttons = document.querySelectorAll('button');
 
-    buttons.forEach((button) =>{
-        button.addEventListener('click',function(){
-            let buttonType = this.getAttribute('data-btn');
-            
-            if(buttonType ==='btn-open-how-to'){
-                openModal('modal-how-to');
-                MakeBackgroundDark();
-            }
-            else if(buttonType === 'btn-open-play'){
-                window.location.href = "game.html";;
-            }
-            else if(buttonType === 'btn-open-story'){
-                openModal('modal-story');
-                MakeBackgroundDark();
-            }
-            else if(buttonType === 'btn-close'){
-                closeModal();
-                MakeBackgroundNormal();
-            }
-            else if(buttonType === 'btn-go-back'){
-                window.location.href = "index.html";
-            }
-            else if(buttonType === 'btn-reset-play'){
-                window.location.href = "game.html";
-            }
-            else{
-                console.log('not implemented');
-            }
-        });
+buttons.forEach((button) =>{
+    button.addEventListener('click',function(){
+        let buttonType = this.getAttribute('data-btn');
+        
+        if(buttonType ==='btn-open-how-to'){
+            openModal('modal-how-to');
+            MakeBackgroundDark();
+        }
+        else if(buttonType === 'btn-open-play'){
+            window.location.href = "game.html";;
+        }
+        else if(buttonType === 'btn-open-story'){
+            openModal('modal-story');
+            MakeBackgroundDark();
+        }
+        else if(buttonType === 'btn-close'){
+            closeModal();
+            MakeBackgroundNormal();
+        }
+        else if(buttonType === 'btn-go-back'){
+            window.location.href = "index.html";
+        }
+        else if(buttonType === 'btn-reset-play'){
+            window.location.href = "game.html";
+        }
+        else{
+            console.log('not implemented');
+        }
     });
 });
+
 
 /**
  * Open a pop up window based on the passed id, by additing the active class

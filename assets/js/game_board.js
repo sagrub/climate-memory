@@ -45,7 +45,6 @@ const generateBoard = (numOfCards=12) => {
         const card = document.createElement('div');
         const cardFront = document.createElement('div');
         const cardBack = document.createElement('div');
-        const gameModal = document.createElement('div');
         
         // add attributes and classes
         card.classList.add('card');
@@ -53,17 +52,13 @@ const generateBoard = (numOfCards=12) => {
         card.id = `card-${i}`;
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
-        gameModal.classList.add('game__modal');
-        gameModal.id = `modal-${i}`;
         
         // add the content to the cards based on the type
         if (cardsData[i].type==="txt") {
             cardFront.innerText = cardsData[i].text;
-            gameModal.innerText = cardsData[i].text;
         }       
         else if (cardsData[i].type==="img"){
             cardFront.innerText = cardsData[i].img;
-            gameModal.innerText = cardsData[i].img;
         }else{
             console.log('not implemented for such type');
         }
@@ -71,7 +66,6 @@ const generateBoard = (numOfCards=12) => {
         gameBoard.append(card);
         card.append(cardFront);
         card.append(cardBack);
-        gameBoard.append(gameModal);
         
     }
 };
