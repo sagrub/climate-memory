@@ -24,6 +24,9 @@ document.addEventListener('DOMContentLoaded',function(){
                 closeModal();
                 MakeBackgroundNormal();
             }
+            else if(buttonType === 'btn-go-back'){
+                window.location = "https://brodsa.github.io/climate-memory/index.html";
+            }
             else{
                 console.log('not implemented');
             }
