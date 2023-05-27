@@ -298,10 +298,6 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         -webkit-transform: none !important;
         
     }
-    
-    .game__score{
-        gap: 20px;
-    }
 
     .game__board{
         grid-template-rows: repeat(4,6rem);
