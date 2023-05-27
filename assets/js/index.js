@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded',function(){
     const buttons = document.querySelectorAll('button');
 
-    for(let button of buttons){
+    buttons.forEach((button) =>{
         button.addEventListener('click',function(){
             let buttonType = this.getAttribute('data-btn');
             
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded',function(){
                 MakeBackgroundDark();
             }
             else if(buttonType === 'btn-open-play'){
-                window.location = "https://brodsa.github.io/climate-memory/game.html"
+                window.location = "https://brodsa.github.io/climate-memory/game.html";
             }
             else if(buttonType === 'btn-open-story'){
                 openModal('modal-story');
@@ -27,17 +27,16 @@ document.addEventListener('DOMContentLoaded',function(){
             else{
                 console.log('not implemented');
             }
-        })
-    }
-    
-})
+        });
+    });
+});
 
 /**
  * Open a pop up window based on the passed id, by additing the active class
  */
 function openModal(modalId){
     const modal = document.getElementById(modalId);
-    if (modal == null) return
+    if (modal == null) return;
     modal.classList.add('active');
 }
 
