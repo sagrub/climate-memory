@@ -116,7 +116,8 @@ h1,h2,h2 {
 }
 
 
-.modal{
+.modal,
+.win-board{
     /* inspiration from https://www.youtube.com/watch?v=MBaw_6cPmAw */
     position: fixed;
     top: 50%;
@@ -188,9 +189,26 @@ h1,h2,h2 {
     grid-template-columns: repeat(3,4rem);
     gap: 2px;
     justify-content: center;
-    perspective: 1000px;
+    perspective: 1000px;  
+}
 
+.win-board{
+    background-color: var(--white);
+    height: 20vh;
+    width: 30%;
     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.win-board__header{
+    margin: 0 10px;
+}
+
+.win-board__body .paragraph{
+    margin-bottom: 5px;
 }
 
 /* code inspiration for the css style of card, card__front, card__back

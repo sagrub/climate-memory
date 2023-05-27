@@ -82,13 +82,14 @@ function displayFlips(){
 let timeSecond = 0;
 const textTime = document.getElementById('total-time');
 
-setInterval(function(){
+let getTime = setInterval(function(){
     timeSecond++;
     let seconds = (timeSecond % 60).toString().padStart(2,'0');
     let minutes = (Math.floor(timeSecond / 60)).toString().padStart(2,'0');
     textTime.innerText = `${minutes}:${seconds}`
-},1500);
+},1200);
 
+getTime;
 
 /**
  * Display win board
@@ -96,6 +97,22 @@ setInterval(function(){
 function showWinBoard(){
     const totalNumberCards = cards.length / 2;
     const winBoard = document.querySelector(".win-board");
-    console.log(winBoard.classList);
-    totalNumberCards === correctFlips ? winBoard.classList.add('active') : winBoard.classList.remove('active');
+    const winBoardTime = document.querySelector("#win-board__time");
+    const winBoardFlips = document.querySelector("#win-board__flips");
+
+    
+    if (totalNumberCards === correctFlips){
+        clearInterval(getTime);
+        const time = document.querySelector("#total-time").innerText;
+        const flips = document.querySelector("#total-flips").innerText;
+        
+        winBoardTime.innerText = time;
+        winBoardFlips.innerText = flips;
+
+        winBoard.classList.add('active');
+        setTimeout(() => {
+            winBoard.classList.remove('active')
+        },3000);
+    }
+    ;
 }

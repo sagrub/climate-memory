@@ -32,15 +32,20 @@
                 <button data-btn="btn-reset-play" class="btn btn--primary">Reset game</button>
                 <button data-btn="btn-go-back" class="btn btn--primary">Go Back</button>
             </div>
-
-            <div class="win-board">
-                its a win
-            </div>
         </div>
+    </div>
 
+    <div class="win-board">
+        <div class="win-board__header">
+            <h2 class="win-board__title">It's win!</h2>
+        </div>
+        <div class="win-board__body">
+            <p class="paragraph">Flips: <span id="win-board__flips"> 32</span> </p>
+            <p class="paragraph">Time: <span id="win-board__time">00:23</span></p>
+        </div>
     </div>
     
-    <div id="overlay"></div>
+    
 
     <script type="module" src="./assets/js/script.js"></script>
     <script type="module" src="./assets/js/game_board.js"></script>
