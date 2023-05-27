@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded',function(){
             else if(buttonType === 'btn-go-back'){
                 window.location = "https://brodsa.github.io/climate-memory/index.html";
             }
-            else if(buttonType === 'btn-refresh'){
+            else if(buttonType === 'btn-reset-play'){
                 window.location = "https://brodsa.github.io/climate-memory/game.html";
             }
             else{
