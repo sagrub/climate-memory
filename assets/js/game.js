@@ -60,7 +60,7 @@ function checkCardsMatch(){
     }else{
         flipCardsBack();  
     }
-    // showWinBoard();
+    showWinBoard();
     
 };
 
@@ -105,27 +105,27 @@ getTime;
 /**
  * Display win board
  */
-// function showWinBoard(){
-//     const totalNumberCards = cards.length / 2;
-//     const winBoard = document.querySelector(".win-board");
-//     const winBoardTime = document.querySelector("#win-board__time");
-//     const winBoardFlips = document.querySelector("#win-board__flips");
+function showWinBoard(){
+    const totalNumberCards = cards.length / 2;
+    const winBoard = document.querySelector(".win-board");
+    const winBoardTime = document.querySelector("#win-board__time");
+    const winBoardFlips = document.querySelector("#win-board__flips");
 
     
-//     if (totalNumberCards === correctFlips){
-//         clearInterval(getTime);
-//         const time = document.querySelector("#total-time").innerText;
-//         const flips = document.querySelector("#total-flips").innerText;
+    if (totalNumberCards === correctFlips){
+        clearInterval(getTime);
+        const time = document.querySelector("#total-time").innerText;
+        const flips = document.querySelector("#total-flips").innerText;
         
-//         winBoardTime.innerText = time;
-//         winBoardFlips.innerText = flips;
+        winBoardTime.innerText = time;
+        winBoardFlips.innerText = flips;
 
-//         winBoard.classList.add('active');
-//         setTimeout(() => {
-//             winBoard.classList.remove('active')
-//         },3000);
-//     }
-//     ;
-// }
+        winBoard.classList.add('active');
+        setTimeout(() => {
+            winBoard.classList.remove('active')
+        },3000);
+    }
+    ;
+}
 
 
