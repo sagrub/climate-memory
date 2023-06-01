@@ -128,7 +128,7 @@ h1,h2,h2 {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 2;
     overflow: auto;
-    height: 70vh;
+    max-height: 70vh;
     width: 70%;
 }
 
@@ -168,6 +168,48 @@ h1,h2,h2 {
     opacity: 1;
 }
 
+/* form */
+.form .btn {
+    width: 80px;
+    padding: 5px;
+}
+
+.form .buttons{
+    flex-direction: row;
+}
+
+.form{
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.text-input, .text-field{
+    display:block;
+    width: 100%;
+    margin: 2px 0 7px 0;
+    border-radius: 2px;
+    outline-color: var(--secondary-color);
+}
+
+.text-input{
+    height: 25px;
+}
+
+.text-field{
+    font-family: inherit;
+}
+.text-input:hover, .text-field:hover{
+    border: solid 2px var(--primary-color);
+}
+
+.link{
+    color: var(--black);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* board game */
 .game{
     position:absolute;
     top:50%;
@@ -307,8 +349,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     }
 
     .modal{
-        height: auto;
-        max-width: 650px;
+        max-height: 90%;
     }
 
     .game{
@@ -331,15 +372,23 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 }
 
 @media screen and (min-width: 660px ) {
-    .container,.modal{
+    /* .container{
         overflow: visible;
-    }
+    } */
     .buttons{
         flex-direction: row;
     }
 
+    .modal{
+        width: 500px;
+    }
+
     .modal__body{
         padding: 10px 30px 50px;
+    }
+
+    .form{
+        max-width: 400px;
     }
 
     .game__board{
