@@ -73,6 +73,43 @@
             Id fugiat facilis deleniti quo ab culpa minus saepe expedita reprehenderit sunt exercitationem laborum illum, quod libero voluptate magni asperiores porro? Veniam quia tempore laudantium quae ullam sed incidunt architecto.</p>
         </div>
     </div>
+
+    <div class="modal active" id="modal-contact">
+        <div class="modal__header">
+            <button data-btn="btn-close" class="btn btn--close">&times;</button>
+            <h2 class="modal__title">Get in touch</h2>
+        </div>
+       
+        <div class="modal__body">
+            <p class="paragraph">Would you like to play with your cards. Sent me your suggestions about climate change facts or tips. An intersting content, which could help to rise the awareness about this topic, is more than welcome!</p>
+
+            <div class="form">
+                <form action="https://formsubmit.co/sarka.grubner@gmail.com" method="POST">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="first_name" id="fname" required placeholder="First Name">
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="last_name" id="lname" required placeholder="Last Name">
+
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" required placeholder="@">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="massage" cols="10" rows="10"></textarea>
+
+                    <div class="buttons">
+                        <input type="hidden" name="_next" value="https://brodsa.github.io/climate-memory/thank_you.html">
+                        <input class="btn btn--primary"  type="submit" value="Send" >
+                        <input class="btn" type="reset" value="Clear">
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
     
     
     <div id="overlay"></div>
