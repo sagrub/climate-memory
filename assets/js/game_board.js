@@ -41,7 +41,9 @@ const generateBoard = (numOfCards=12) => {
     const gameBoard = document.querySelector(".game__board");
     const cardsData = selectRandomCards();
 
+   
     for(let i=0; i < numOfCards; i++){
+         // start: create card function
         const card = document.createElement('div');
         const cardFront = document.createElement('div');
         const cardBack = document.createElement('div');
@@ -54,6 +56,7 @@ const generateBoard = (numOfCards=12) => {
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
         
+        // start: check img or txt
         // add the content to the cards based on the type
         if (cardsData[i].type==="txt") {
             cardFront.innerText = cardsData[i].text;
@@ -63,11 +66,14 @@ const generateBoard = (numOfCards=12) => {
         }else{
             console.log('not implemented for such type');
         }
+        // end: check img or txt
 
+    
         gameBoard.append(card);
         card.append(cardFront);
         card.append(cardBack);
         // card.append(cardModal);
+         // start: create card function
         
     }
 };
