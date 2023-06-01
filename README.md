@@ -10,23 +10,48 @@
 ---
 
 ## Introduction
-The Climate Memory website was created to raise the awareness of the climate change. The website attempts to comunicate the facts of the human activities effecting the nature and the life of other people include our childern.
+The Climate Memory website was created to raise the awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people include our childern.
 
-The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The image can be either a visualization, icon or just a figure. The content of the fliped card is everytime magnified in order read the descrition properly. 
+
+The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The image can be either a visualization, icon or just a figure. The content of the fliped card is everytime magnified in order to read the text or see the image properly. 
+
+The game is particularly for adults or children who can already read. The website can even be used at schools for educative purposes.
+
 
 Click <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> to play the game!
 
 ## UX
-
+The purpose of the game is communicate the facts about the climate change in an appealing and user-friedly way. This educative website is responsive so that the user can play the game on various devices.  
 
 ### User Stories
+- **First-Time User Goals**
+    - US1: As a first-time visitor, I want to understand the purpose of the gama.
+    - US2: As a first-time visitor, I want to the game is fun and interactive.
+    - US3: As a first-time visitor, I want to found out interesting information about the climate change.
+    - US4: As a first-time visitor, I want to understand the game rules.
+    - US5: As a first-time visitor, I want to play the game on my mobile phone. 
+    - US6: As a first-time visitor, I want to see my progress.
+
+
+- **Returning Visitor Goals**
+    - US7: As a returning visitor, I want to found out more facts about the climate change.
+    - US8: As a returning visitor, I want to suggest the developer including additional facts.
 
 ### Wireframes
-![Desktop Wireframe](./assets/images/documentation/ux/ux_wireframe_desktop.png)
-![Mobile Wireframe](./assets/images/documentation/ux/ux_wireframe_mobile.png)
+The Wireframes were designed using [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE). 
+Two different layouts were mainly considered: 
+
+- [Desktop Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/images/documentation/ux/ux_wireframe_desktop.png)
+
+- [Mobile Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/images/documentation/ux/ux_wireframe_mobile.png)
+
+
 
 ## Fonts
 Fonts were selected based on the [fontpair](https://www.fontpair.co/pairings/montserrat-hind). The fonts were included in the web page via the link tags, which were generated using the [Google Fonts](https://fonts.google.com/).
+
+- Montserrat was chosen for headings
+- Hind was takein for body text, such as paragraphs
 
 # Colors
 The color pallete was chosen using [coolors](https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c) with a slight modification. The final colors includes the Eerie Black and Alice Blue, see [here](https://coolors.co/201f1f-6b705c-a5a58d-edf6f9-ddbea9-cb997e).
@@ -40,11 +65,44 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
 
 ## Testing
 
-## Deployment
+---
 
+## Deployment
+The site was deployed to GitHub Pages. The steps to deploy the webpage were following: 
+- In the GitHub repository, the Settings Section was selected.
+- The Page Category on the left hand side was selected.
+- Under the Branch Section, the source branch from the drop-down menu (e.g. master branch) was chosen.
+- The Save Button was cliked on.
+- The page url was generated, which indicates the successful deployment. 
+  
+The website can be viewed <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> 
+
+
+During the development, the commit type was included in commit messages, following [the blog post](https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/).
+
+## Clone the Repository
+The repository can also be cloned locally, the steps are following:
+
+1. On Git
+    - Go to the repository, i.e. https://github.com/brodsa/mgv-vorau
+    - You see the content of the repository, i.e. all the files are listed. On the right side at the top of the list, find the Code drop down button and click on it.
+    - Copy the repository HTTPS link to the clipboard.
+2. In the terminal (Note: git must be preinstalled) 
+    - Open the terminal and navigate, where you want to clone the repository.
+    - Type `git clone` and insert the content from the clipboard, leading to the command `git clone https://github.com/brodsa/climate-memory.git`. 
+    - Once the project is cloned, you can start using the repository locally.
+
+---
+## Languages
+- HTML
+- CSS
+- Markdown
+- JavaScript
+
+---
 ## References
 
-### Resources
+### Credits & Insipirations
 
 - JavaScript Tutorial 
     - [Web Dev Simplified](https://www.youtube.com/@WebDevSimplified)
@@ -58,5 +116,17 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
     - [The Climate Book by Greta Thunberg](https://www.amazon.de/Climate-Book-Greta-Thunberg/dp/0241547474/ref=sr_1_1?adgrpid=73939651914&hvadid=352944569214&hvdev=c&hvlocphy=1030962&hvnetw=g&hvqmt=e&hvrand=2852190861556407914&hvtargid=kwd-1433668333381&hydadcr=24125_1739945&keywords=the+climate+book&qid=1685468438&sr=8-1)
     - [IEEP](https://ieep.eu/publications/carbon-inequality-in-2030-per-capita-consumption-emissions-and-the-1-5c-goal/#:~:text=To%20stay%20within%20this%20guardrail,every%20person%20on%20Earth%20today.)
     - [Fontawesome](https://fontawesome.com/)
+
+### Technologies & Tools
+- [Google Fonts]() was used to import the fonts into the style.css file.
+- [Color Pallete](https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578) was used to select accessible colors.
+- [Image Compressor](https://tinypng.com/) was used to compress the images.
+- [Image Converter](https://ezgif.com/) was used to convert all images in the webp format.
+- [Favicon](https://favicon.io/favicon-converter/) was used to generate the code and files for the webpage favicon.
+- [GitHub](https://github.com/) was used to store the code and host the website.
+- [Gitpod](https://www.gitpod.io/) is an IDE and was used to develop the website.
+- [Formsubmit](https://formsubmit.co/) was used for the form submission.
+- [Mockup Generator](https://techsini.com/multi-mockup/?url=http://www.example.com) was used to generate the mockup for README.
+- [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE) was used to create wireframes.
 
 ## Acknowledgements
