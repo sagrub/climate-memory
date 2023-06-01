@@ -10,9 +10,14 @@
 ---
 
 ## Introduction
+The Climate Memory website was created to raise the awareness of the climate change. The website attempts to comunicate the facts of the human activities effecting the nature and the life of other people include our childern.
 
+The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The image can be either a visualization, icon or just a figure. The content of the fliped card is everytime magnified in order read the descrition properly. 
+
+Click <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> to play the game!
 
 ## UX
+
 
 ### User Stories
 
