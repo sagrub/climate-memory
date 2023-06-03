@@ -247,6 +247,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     transform-style: preserve-3d;
     transition: transform .5s;
     cursor: pointer;
+    font-size: 0.6rem;
 }
 
 .card__modal, .win-board{

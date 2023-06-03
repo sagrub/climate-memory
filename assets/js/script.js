@@ -19,10 +19,10 @@ buttons.forEach((button) =>{
             closeModal();
             MakeBackgroundNormal();
         }
-        else if(buttonType === 'btn-go-back'){
+        else if(buttonType === 'btn-home'){
             window.location.href = "index.html";
         }
-        else if(buttonType === 'btn-reset-play'){
+        else if(buttonType === 'btn-refresh'){
             window.location.href = "game.html";
         }
         else{
