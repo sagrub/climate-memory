@@ -27,7 +27,6 @@ const selectRandomCards = (numOfPairs=6) => {
     // put img cards and txt cards together and shuffle the array again
     const shuffled = selectedTxt.concat(selectedImg)
     const shuffledData = shuffled.sort(() => 0.5 - Math.random());
-    console.log(shuffledData);
     return shuffledData;
 }
 
@@ -56,16 +55,10 @@ const generateBoard = (numOfCards=12) => {
         cardFront.classList.add('card__front');
         cardBack.classList.add('card__back');
         
+        let cardData = cardsData[i];
         // start: check img or txt
         // add the content to the cards based on the type
-        if (cardsData[i].type==="txt") {
-            cardFront.innerText = cardsData[i].text;
-        }       
-        else if (cardsData[i].type==="img"){
-            cardFront.innerHTML = `<img src="${cardsData[i].img}">` ;
-        }else{
-            console.log('not implemented for such type');
-        }
+        addCardContent(cardFront, cardData);
         // end: check img or txt
 
     
@@ -80,6 +73,22 @@ const generateBoard = (numOfCards=12) => {
 
 generateBoard();
 
+
+function addCardContent(cardFront, cardData){
+    if (cardData.type==="txt") {
+        cardFront.innerHTML = `<p class="card__text"> ${cardData.text} </p>`;
+    }       
+    else if (cardData.type==="img"){
+        cardFront.innerHTML = `<div class="card__img"><img class="img" src="${cardData.img}"></div>`;
+        console.log(cardFront)
+    }else{
+        console.info('not implemented for such type');
+    }
+}
+
+
+
+
 const cardsModal = document.querySelector(".card__modal");
 const cards = document.querySelectorAll(".card");
 cards.forEach(card => card.addEventListener('click',flipCard));
@@ -93,13 +102,12 @@ let totalFlips = 0;
 let correctFlips = 0;
 
 
-console.log(freezBoard);
-
 // code inspiration from https://www.youtube.com/watch?v=ZniVgo8U7ek
 function flipCard(){
     if (freezBoard) return;
     this.classList.add('flip');
-    showCardsModal(this);
+    let cardContent = this.children[0].children[0];
+    showCardsModal(cardContent);
 
     if(!flipedCard){
         // the first card has fliped
@@ -117,15 +125,29 @@ function flipCard(){
     
 }
 
-function showCardsModal(obj){
-    console.log(obj);
+function showCardsModal(cardContent){
     setTimeout(()=>{
+        // show the pop up window
         cardsModal.classList.add('active');
+        
+        const modalContent = cardContent.cloneNode(true);
+        const isText = modalContent.classList.contains('card__text');
+
+        modalContent.classList.add('card--large');
+        cardsModal.appendChild(modalContent);
+        
+        if(isText){
+            cardsModal.classList.add('card__modal--text');
+        }else{
+            cardsModal.classList.add('card__modal--img');
+        }
+        
+        
     },800);
 
-    setTimeout(()=>{
-        cardsModal.classList.remove('active');
-    },2000);
+    // setTimeout(()=>{
+    //     cardsModal.classList.remove('active');
+    // },2000);
 }
 
 function checkCardsMatch(){

@@ -1,58 +1,58 @@
 [
     {
         "id": 0,
-        "img": "../../images/game_fridge.jpg",
+        "img": "./assets/images/game_fridge.webp",
         "img-type": "figure",
         "text": "3 billion people use less energy, on an annual per capita basis, than a standard American refrigerator"
     },
     {
         "id": 1,
-        "img": "../../images/game_stripes.jpg",
+        "img": "./assets/images/game_stripes.webp",
         "img-type": "img",
         "text": " The progression from blue (cooler) to red (warmer) stripes portrays the increase of average global temperature from 1850 to 2018."
     },
     {
         "id": 2,
-        "img": "../../images/game_airplane.jpg",
+        "img": "./assets/images/game_airplane.webp",
         "img-type": "icon",
         "text": "Air traveling counts for about 4% of our total climenate impact and yet 80% of the world's population have never set foot on an aeroplane."
  
     },
     {
         "id": 3,
-        "img": "../../images/game_football.jpg",
+        "img": "./assets/images/game_football.webp",
         "img-type": "icon",
         "text": "Every second, an area the size of a football field of forest is cut down."
     },
     {
         "id": 4,
-        "img": "../../images/game_plastic_bottle.jpg",
+        "img": "./assets/images/game_plastic_bottle.webp",
         "img-type": "icon",
         "text": "Every year, an estimated 8 milion tonnes of plastic waste are dumped into our oceans."
 
     },
     {
         "id": 5,
-        "img": "../../images/game_emissions_per_capital.jpg",
+        "img": "./assets/images/game_emission_per_capital.webp",
         "img-type": "figure",
         "text": "The world’s largest per capita CO2 emitters is the Qatar with about 35 tonnes and in contrast the Democratic Republic of Congo has the lowest emissions with 0.03 tonnes in 2021"
 
     },
     {
         "id": 6,
-        "img": "../../images/game_emissions_sustainable.jpg",
+        "img": "./assets/images/game_emissions_sustainable.webp",
         "img-type": "icon",
         "text": "To live sustainable, every person on Earth would need to emit an average of just 2.3 tonnes of CO2 per year by 2030"
     },
     {
         "id": 7,
-        "img": "../../images/game_cow.jpg",
+        "img": "./assets/images/game_cow.webp",
         "img-type": "icon",
         "text": "Producing a kilogram of beef emits 60 kilograms of greenhouse gases (CO2-equivalents). While peas emits just 1 kilogram per kg."
     },
     {
         "id": 8,
-        "img": "../../images/game_plant.jpg",
+        "img": "./assets/images/game_plant.webp",
         "img-type": "icon",
         "text": "Shifting towards a plant-base diet could save us up to 8 billion tonnes of C02 every year."
     }

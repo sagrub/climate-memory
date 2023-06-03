@@ -247,7 +247,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     transform-style: preserve-3d;
     transition: transform .5s;
     cursor: pointer;
-    font-size: 0.6rem;
+    
 }
 
 .card__modal, .win-board{
@@ -261,9 +261,9 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 2;
     overflow: auto;
-    height: 80%;
+    height: 85%;
     max-height: 400px;
-    width: 80%;
+    width: 85%;
     max-width: 400px;
 }
 
@@ -289,13 +289,68 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 }
 
 .card__front{
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     transform: rotateY(180deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: solid 3px var(--primary-color);
 }
 
 .card__back{
     background-color: var(--secondary-color);
 }
+
+.card__text {
+    font-size: 0.2rem;
+    text-align: center;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.card__img{
+    width: 3.1rem;
+    height: 3.1rem;
+    border-radius: 4px;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.card--large{
+    font-size: 1rem;
+    text-align:left;
+    margin: 10px;
+}
+
+
+.card__modal--text{
+    padding: 10px;
+    overflow: scroll;
+    margin: 0 auto;
+}
+
+.card__modal--img{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.card__modal--img .card__img{
+    width: 60%;
+    height: 60%;
+    border-radius: 4px;
+    border: solid 4px var(--primary-color)
+}
+
 
 .win-board{
     background-color: var(--white);
@@ -325,9 +380,14 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         gap: 4px;
     }
     
-    .card{
+    .card {
         width: 5rem;
         height: 5rem;
+    }
+
+    .card__img{
+        width: 4.6rem;
+        height: 4.6rem;
     }
      
 }
@@ -376,6 +436,11 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         width: 6rem;
         height: 6rem;
     }
+
+    .card__img{
+        width: 5.6rem;
+        height: 5.6rem;
+    }
   
 }
 
@@ -408,5 +473,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     .card{
         width: 7.5rem;
         height: 7.5rem;
+    }
+
+    .card__img{
+        width: 7rem;
+        height: 7rem;
     }
 }
