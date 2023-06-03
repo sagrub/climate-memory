@@ -88,7 +88,7 @@ h1,h2,h2 {
 
 .container{
     overflow: auto;
-    height: 80vh;
+    height: 80%;
     width: 80%;
     background-color:var(--white);
     padding: 30px;
