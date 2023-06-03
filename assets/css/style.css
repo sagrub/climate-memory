@@ -55,6 +55,7 @@ h1,h2,h2 {
     font-family: inherit;
     text-transform: uppercase;
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 .btn:hover{
@@ -323,7 +324,12 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     
 }
 
-.card--large{
+.card__modal{
+    height: 150px;
+    width: 150px;
+}
+
+.card__modal--large{
     font-size: 1rem;
     text-align:left;
     margin: 10px;
@@ -389,6 +395,11 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         width: 4.6rem;
         height: 4.6rem;
     }
+
+    .card__modal{
+        height: 200px;
+        width: 200px;
+    }
      
 }
 
@@ -440,6 +451,11 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     .card__img{
         width: 5.6rem;
         height: 5.6rem;
+    }
+
+    .card__modal{
+        height: 250px;
+        width: 250px;
     }
   
 }

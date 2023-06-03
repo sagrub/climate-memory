@@ -133,7 +133,7 @@ function showCardsModal(cardContent){
         const modalContent = cardContent.cloneNode(true);
         const isText = modalContent.classList.contains('card__text');
 
-        modalContent.classList.add('card--large');
+        modalContent.classList.add('card__modal--large');
         cardsModal.appendChild(modalContent);
         
         if(isText){
