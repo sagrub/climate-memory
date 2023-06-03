@@ -260,8 +260,10 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     z-index: 2;
     overflow: auto;
-    height: 20vh;
-    width: 40%;
+    height: 80%;
+    max-height: 400px;
+    width: 80%;
+    max-width: 400px;
 }
 
 .card__modal.active, .win-board.active{
@@ -296,8 +298,8 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 
 .win-board{
     background-color: var(--white);
-    height: 20vh;
-    width: 30%;
+    height: 60%;
+    width: 60%;
     
     display: flex;
     flex-direction: column;
