@@ -343,6 +343,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 .card__modal{
     height: 150px;
     width: 150px;
+    z-index: 2;
 }
 
 .card__modal--large{

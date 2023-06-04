@@ -7,6 +7,7 @@ const parameters = {
     numOfPairs: 6,
     pair: 2,
     cardTypes: ["txt","img"],
+    secondsInMinute: 60,
 };
 
 // get the data using fetch function from the slack CI community
@@ -115,10 +116,14 @@ const generateBoard = () => {
 generateBoard();
 
 
-
+/** *********************************
+ *          GAME START
+ ************************************ */
 const cardsModal = document.querySelector(".card__modal");
 const cards = document.querySelectorAll(".card");
 cards.forEach(card => card.addEventListener('click',flipCard));
+cardsModal.addEventListener('click', closeCardsModal);
+
 
 let flipedCard = false;
 let freezBoard = false;
@@ -130,22 +135,27 @@ let correctFlips = 0;
 
 
 // code inspiration from https://www.youtube.com/watch?v=ZniVgo8U7ek
-function flipCard(){
+function flipCard(){    
     if (freezBoard) return;
+
     this.classList.add('flip');
     let cardContent = this.children[0].children[0];
-    showCardsModal(cardContent);
-
+    
     if(!flipedCard){
         // the first card has fliped
         flipedCard = true;
         firstCard = this;
+        showCardsModal(cardContent);
+        console.log('first');
+        // closeCardsModal();
+        
     }else{
         // the second card has fliped
         flipedCard = false;
         secondCard = this;
+        console.log('second');
         // check for match 
-        checkCardsMatch();
+        checkCardsMatch(cardContent);
     }
     totalFlips++;
     displayFlips();
@@ -159,36 +169,53 @@ function showCardsModal(cardContent){
         
         const modalContent = cardContent.cloneNode(true);
         const isText = modalContent.classList.contains('card__text');
+        const classToAdd = isText ? 'card__modal--text' : 'card__modal--img'
 
         modalContent.classList.add('card__modal--large');
         cardsModal.appendChild(modalContent);
-        
-        if(isText){
-            cardsModal.classList.add('card__modal--text');
-        }else{
-            cardsModal.classList.add('card__modal--img');
-        }
-        
-        
+        cardsModal.classList.add(classToAdd);
+        script.MakeBackgroundDark();
+
     },800);
 
-    // setTimeout(()=>{
-    //     cardsModal.classList.remove('active');
-    // },2000);
 }
 
-function checkCardsMatch(){
+
+function closeCardsModal(){
+        console.log('onclick close modal');
+        cardsModal.classList.remove('active');
+        script.MakeBackgroundNormal();
+        cardsModal.innerHTML='';  
+
+        let toComparewith = typeof secondCard === 'undefined'? '': secondCard.dataset.key;
+        console.log('toComparewith',Boolean(toComparewith), toComparewith,'versus' ,firstCard.dataset.key);
+        console.log(firstCard,secondCard);
+       
+        if ((firstCard.dataset.key !== toComparewith ) && toComparewith){
+            console.log('flip back');
+            flipCardsBack();  
+        }else{
+            secondCard = undefined;
+        }
+
+       
+}
+
+function checkCardsMatch(cardContent){
     //if clicked on the same card
     if(firstCard.id === secondCard.id){
         firstCard.classList.remove('flip');
         totalFlips--;
     // if clicked on the matched card
     }else if(firstCard.dataset.key === secondCard.dataset.key){
-        keepCardsFliped();  
+        showCardsModal(cardContent);
+        keepCardsFliped(); 
         correctFlips++;
     // no match
     }else{
-        flipCardsBack();  
+        console.log('no match');
+        showCardsModal(cardContent);
+        
     }
     showWinBoard();
     
@@ -200,12 +227,16 @@ function keepCardsFliped(){
 }
 
 function flipCardsBack(){
+    console.log('flip cards back')
     freezBoard = true;
+
     setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
         freezBoard = false;
-    }, 2050);
+        secondCard = undefined;
+    }, 800);
+
 }
 
 
@@ -225,12 +256,12 @@ const textTime = document.getElementById('total-time');
 
 let getTime = setInterval(function(){
     timeSecond++;
-    let seconds = (timeSecond % 60).toString().padStart(2,'0');
-    let minutes = (Math.floor(timeSecond / 60)).toString().padStart(2,'0');
-    textTime.innerText = `${minutes}:${seconds}`
+    let seconds = (timeSecond % parameters.secondsInMinute).toString().padStart(2,'0');
+    let minutes = (Math.floor(timeSecond / parameters.secondsInMinute)).toString().padStart(2,'0');
+    textTime.innerText = `${minutes}:${seconds}`;
+
 },1200);
 
-getTime;
 
 /**
  * Display win board
@@ -240,23 +271,27 @@ function showWinBoard(){
     const winBoard = document.querySelector(".win-board");
     const winBoardTime = document.querySelector("#win-board__time");
     const winBoardFlips = document.querySelector("#win-board__flips");
+    localStorage.setItem('timeSecondBest',timeSecond++);
+    console.log(localStorage.getItem('timeSecondBest'))
 
-    
     if (totalNumberCards === correctFlips){
         clearInterval(getTime);
+        
         const time = document.querySelector("#total-time").innerText;
         const flips = document.querySelector("#total-flips").innerText;
-        
+                
         winBoardTime.innerText = time;
         winBoardFlips.innerText = flips;
 
         winBoard.classList.add('active');
         setTimeout(() => {
-            winBoard.classList.remove('active')
-        },3000);
+            winBoard.classList.remove('active');
+            // remove the pop up window of the last card
+            cardsModal.classList.remove('active');
+            script.MakeBackgroundNormal();
+        },3500);
+
+        
     }
     ;
 }
-
-
-console.log(script.addListenerOnButtons);
