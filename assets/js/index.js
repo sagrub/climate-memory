@@ -66,6 +66,9 @@ const addListenerOnButtons = () => {
                 case  'btn-home':
                     window.location.href = "index.html";
                     break;
+                case 'btn-homepage':
+                    window.location = "https://brodsa.github.io/climate-memory/";
+                    break;
                 case  'btn-refresh':
                     window.location.href = "game.html";
                     break;
