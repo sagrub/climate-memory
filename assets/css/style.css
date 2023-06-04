@@ -97,10 +97,6 @@ h1,h2,h2 {
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-
 }
 
 /* .container--center{
@@ -135,7 +131,7 @@ h1,h2,h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     margin-top: 20px;
 }
 
@@ -239,10 +235,6 @@ h1,h2,h2 {
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
-
-    display: flex;
-    flex-direction: column;
-    min-height: min-content;
 }
 
 
@@ -254,8 +246,8 @@ h1,h2,h2 {
 
 .game__board{
     display: grid;
-    grid-template-rows: repeat(4,3.5rem);
-    grid-template-columns: repeat(3,3.5rem);
+    grid-template-rows: repeat(4,3rem);
+    grid-template-columns: repeat(3,3rem);
     gap: 2px;
     justify-content: center;
     perspective: 1000px;  
@@ -267,8 +259,8 @@ https://webtips.dev/memory-game-in-javascript?utm_content=cmp-true,
 https://www.youtube.com/watch?v=ZniVgo8U7ek */
 
 .card{
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     position: relative;
     transform-style: preserve-3d;
     transition: transform .5s;
@@ -407,6 +399,9 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 
 
 @media screen and (min-width:350px){
+    .buttons{
+        gap: 20px;
+    }
     .game__board{
         grid-template-rows: repeat(4,5rem);
         grid-template-columns: repeat(3,5rem);
