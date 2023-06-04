@@ -25,6 +25,10 @@ buttons.forEach((button) =>{
         else if(buttonType === 'btn-refresh'){
             window.location.href = "game.html";
         }
+        else if ( buttonType === 'btn-contact'){
+            openModal('modal-contact');
+            MakeBackgroundDark();
+        }
         else{
             console.log('not implemented');
         }

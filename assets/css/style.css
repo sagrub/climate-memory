@@ -57,6 +57,7 @@ h1,h2,h2 {
     text-transform: uppercase;
     cursor: pointer;
     color: var(--black);
+    font-size: 0.9rem;
 }
 
 .btn:hover{
@@ -115,6 +116,14 @@ h1,h2,h2 {
     align-items: center;
 }
 
+.container__content{
+    text-align: center;
+}
+
+.container__content div:nth-child(2){
+    margin-bottom: 30px;
+}
+
 
 .buttons{
     display: flex;
@@ -125,9 +134,6 @@ h1,h2,h2 {
     margin-top: 20px;
 }
 
-.container__content div:nth-child(2){
-    margin-bottom: 30px;
-}
 
 .modal{
     /* inspiration from https://www.youtube.com/watch?v=MBaw_6cPmAw */
