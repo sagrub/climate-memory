@@ -77,7 +77,7 @@ const addListenerOnButtons = () => {
                     MakeBackgroundDark();
                     break;
                 default:
-                    console.waring('not implemented');
+                    console.info('not implemented');
             }
             
         });
