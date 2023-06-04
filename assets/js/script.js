@@ -1,45 +1,7 @@
-const buttons = document.querySelectorAll('button');
-
-buttons.forEach((button) =>{
-    button.addEventListener('click',function(){
-        let buttonType = this.getAttribute('data-btn');
-        
-        if(buttonType ==='btn-open-how-to'){
-            openModal('modal-how-to');
-            MakeBackgroundDark();
-        }
-        else if(buttonType === 'btn-open-play'){
-            window.location.href = "game.html";;
-        }
-        else if(buttonType === 'btn-open-story'){
-            openModal('modal-story');
-            MakeBackgroundDark();
-        }
-        else if(buttonType === 'btn-close'){
-            closeModal();
-            MakeBackgroundNormal();
-        }
-        else if(buttonType === 'btn-home'){
-            window.location.href = "index.html";
-        }
-        else if(buttonType === 'btn-refresh'){
-            window.location.href = "game.html";
-        }
-        else if ( buttonType === 'btn-contact'){
-            openModal('modal-contact');
-            MakeBackgroundDark();
-        }
-        else{
-            console.log('not implemented');
-        }
-    });
-});
-
-
 /**
  * Open a pop up window based on the passed id, by additing the active class
  */
-function openModal(modalId){
+const openModal = (modalId) => {
     const modal = document.getElementById(modalId);
     if (modal == null) return;
     modal.classList.add('active');
@@ -48,7 +10,7 @@ function openModal(modalId){
 /**
  * Close any pop up window with a class modal
  */
-function closeModal(){
+const closeModal = () => {
     const modals = document.getElementsByClassName('modal');
     for (let modal of modals){
         if (modal == null) return;
@@ -61,16 +23,63 @@ function closeModal(){
  * Make the bakcground darker, used in case if the popup
  * window gets active.
  */
-function MakeBackgroundDark(){
+const MakeBackgroundDark = () =>{
     const overlay = document.querySelector('#overlay');
     overlay.classList.add('active');
 }
 
 /**
- * Put the background into the previouse stage, used in case
+ * Put the background into the previous stage, used in case
  * the pop-up window is inactive
  */
-function MakeBackgroundNormal(){
+const MakeBackgroundNormal = () => {
     const overlay = document.querySelector('#overlay');
     overlay.classList.remove('active');
 }
+
+const addListenerOnButtons = () => {
+    const buttons = document.querySelectorAll('button');
+
+    buttons.forEach((button) =>{
+        button.addEventListener('click',function(){
+            let buttonType = this.getAttribute('data-btn');
+            
+            switch(buttonType){
+                case 'btn-open-how-to':
+                    openModal('modal-how-to');
+                    MakeBackgroundDark();
+                    break;
+                case 'btn-open-play':
+                    window.location.href = "game.html";;
+                    break;
+                case 'btn-open-story':
+                    openModal('modal-story');
+                    MakeBackgroundDark();
+                    break;
+                case  'btn-close':
+                    closeModal();
+                    MakeBackgroundNormal();
+                    break;
+                case  'btn-home':
+                    window.location.href = "index.html";
+                    break;
+                case  'btn-refresh':
+                    window.location.href = "game.html";
+                    break;
+                case'btn-contact':
+                    openModal('modal-contact');
+                    MakeBackgroundDark();
+                    break;
+                default:
+                    console.waring('not implemented');
+            }
+            
+        });
+    });
+}
+
+
+
+
+
+addListenerOnButtons();

@@ -1,3 +1,6 @@
+import MakeBackgroundDar from ScriptProcessorNode;
+import MakeBackgroundNormal from ScriptProcessorNode;
+
 // get the data using fetch function from the slack CI community
 const data = await fetch("assets/data/data.json").then(res => res.json());
 
