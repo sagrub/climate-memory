@@ -75,13 +75,13 @@ const addCardAttributes = ((card, cardFront, cardBack, cardData, index ) => {
  */
 const addCardContent = ((cardFront, cardData) => {
     if (cardData.type === parameters.cardTypes[0]) {
-        cardFront.innerHTML = `<p class="card__text"> ${cardData.text} </p>`;
+        cardFront.innerHTML = `<p class="card__txt"> ${cardData.text} </p>`;
     }       
     else if (cardData.type === parameters.cardTypes[1]){
         cardFront.innerHTML = `<div class="card__img"><img class="img" src="${cardData.img}"></div>`;
         console.log(cardFront)
     }else{
-        console.info('not implemented for such type');
+        console.warn('not implemented for such type');
     }
 });
 
@@ -168,8 +168,9 @@ function showCardsModal(cardContent){
         cardsModal.classList.add('active');
         
         const modalContent = cardContent.cloneNode(true);
-        const isText = modalContent.classList.contains('card__text');
-        const classToAdd = isText ? 'card__modal--text' : 'card__modal--img'
+        const isText = modalContent.classList.contains('card__txt');
+        console.log(isText,modalContent.classList);
+        const classToAdd = isText ? 'card__modal--txt' : 'card__modal--img'
 
         modalContent.classList.add('card__modal--large');
         cardsModal.appendChild(modalContent);
@@ -182,9 +183,23 @@ function showCardsModal(cardContent){
 
 
 function closeCardsModal(){
-        console.log('onclick close modal');
+        console.log('onclick closes modal');
+        // remove the active class to close the modal
         cardsModal.classList.remove('active');
+        // remove type card specific classes
+        cardsModal.classList.forEach(item => {
+            console.log('is img modal class',item.includes('img'),item);
+            if (item.includes(parameters.cardTypes[0])){
+                cardsModal.classList.remove('card__modal--txt'); 
+            }else if(item.includes(parameters.cardTypes[1])){
+                cardsModal.classList.remove('card__modal--img'); 
+            }else{
+                console.info('not implemented');
+            }
+        });
+        // activate the background again
         script.MakeBackgroundNormal();
+        // remove the conent of the modal
         cardsModal.innerHTML='';  
 
         let toComparewith = typeof secondCard === 'undefined'? '': secondCard.dataset.key;
@@ -271,8 +286,7 @@ function showWinBoard(){
     const winBoard = document.querySelector(".win-board");
     const winBoardTime = document.querySelector("#win-board__time");
     const winBoardFlips = document.querySelector("#win-board__flips");
-    localStorage.setItem('timeSecondBest',timeSecond++);
-    console.log(localStorage.getItem('timeSecondBest'))
+
 
     if (totalNumberCards === correctFlips){
         clearInterval(getTime);
