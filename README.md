@@ -65,6 +65,12 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
 
 ## Testing
 
+
+### Bugs & Issues
+- text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
+- the blue color of buttons on iphone; specify the color and set webkit
+-  
+
 ---
 
 ## Deployment
