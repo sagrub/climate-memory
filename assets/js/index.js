@@ -7,6 +7,7 @@ const openModal = (modalId) => {
     modal.classList.add('active');
 }
 
+
 /**
  * Close any pop up window with a class modal
  */
@@ -28,6 +29,7 @@ const MakeBackgroundDark = () =>{
     overlay.classList.add('active');
 }
 
+
 /**
  * Put the background into the previous stage, used in case
  * the pop-up window is inactive
@@ -36,6 +38,7 @@ const MakeBackgroundNormal = () => {
     const overlay = document.querySelector('#overlay');
     overlay.classList.remove('active');
 }
+
 
 const addListenerOnButtons = () => {
     const buttons = document.querySelectorAll('button');
@@ -78,8 +81,6 @@ const addListenerOnButtons = () => {
     });
 }
 
-
-
-
-
 addListenerOnButtons();
+
+export default {MakeBackgroundDark, MakeBackgroundNormal,addListenerOnButtons};
