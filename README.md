@@ -77,6 +77,13 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
 - [404 Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2F404.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [Thank You Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Fthank_you.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
+### Accessibility
+- [Homepage](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/)
+- [Game Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/game.html)
+- [404 Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/404.html)
+- [Thank You Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/thank_you.html)
+
+
 ### Bugs & Issues
 - text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
 - the blue color of buttons on iphone; specify the color and set webkit
