@@ -1,7 +1,5 @@
 import {default as script} from "./index.js";
 
-
-
 const parameters = {
     dataPath: "assets/data/data.json",
     numOfPairs: 6,

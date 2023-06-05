@@ -7,7 +7,7 @@
     },
     {
         "id": 1,
-        "img": "./assets/images/game_stripes.webp",
+        "img": "./assets/images/game_stripes_small.webp",
         "img-type": "img",
         "text": " The progression from blue (cooler) to red (warmer) stripes portrays the increase of average global temperature from 1850 to 2018."
     },
@@ -40,7 +40,7 @@
     },
     {
         "id": 6,
-        "img": "./assets/images/game_emissions_sustainable.webp",
+        "img": "./assets/images/game_emission_sustainable.webp",
         "img-type": "icon",
         "text": "To live sustainable, every person on Earth would need to emit an average of just 2.3 tonnes of CO2 per year by 2030"
     },
