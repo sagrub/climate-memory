@@ -1,11 +1,15 @@
+/** ***********************************************
+ *          GAME BOARD CREATION
+ ************************************************** */
+// import the function from index.js - the buttons events and background are in used
 import {default as script} from "./index.js";
 
+// define input parameters for creating the game
 const parameters = {
     dataPath: "assets/data/data.json",
     numOfPairs: 6,
     pair: 2,
     cardTypes: ["txt","img"],
-    secondsInMinute: 60,
 };
 
 // get the data using fetch function from the slack CI community
@@ -123,39 +127,50 @@ cards.forEach(card => card.addEventListener('click',flipCard));
 cardsModal.addEventListener('click', closeCardsModal);
 
 
-let flipedCard = false;
-let freezBoard = false;
-let firstCard;
-let secondCard;
+const parametersGame = {
+    flipedCard: false,
+    freezBoard: false,
+    firstCard: undefined,
+    secondCard: undefined,
+    totalFlips: 0,
+    correctFlips: 0,
+    secondsInMinute: 60,
+}
 
-let totalFlips = 0;
-let correctFlips = 0;
+// let flipedCard = false;
+// let freezBoard = false;
+// let firstCard;
+// let secondCard;
+// let totalFlips = 0;
+// let correctFlips = 0;
+
+
 
 
 // code inspiration from https://www.youtube.com/watch?v=ZniVgo8U7ek
 function flipCard(){    
-    if (freezBoard) return;
+    if (parametersGame.freezBoard) return;
 
     this.classList.add('flip');
     let cardContent = this.children[0].children[0];
     
     if(!flipedCard){
         // the first card has fliped
-        flipedCard = true;
-        firstCard = this;
+        parametersGame.flipedCard = true;
+        parametersGame.firstCard = this;
         showCardsModal(cardContent);
         console.log('first');
         // closeCardsModal();
         
     }else{
         // the second card has fliped
-        flipedCard = false;
-        secondCard = this;
+        parametersGame.flipedCard = false;
+        parametersGame.secondCard = this;
         console.log('second');
         // check for match 
         checkCardsMatch(cardContent);
     }
-    totalFlips++;
+    parametersGame.totalFlips++;
     displayFlips();
     
 }
@@ -200,15 +215,12 @@ function closeCardsModal(){
         // remove the conent of the modal
         cardsModal.innerHTML='';  
 
-        let toComparewith = typeof secondCard === 'undefined'? '': secondCard.dataset.key;
-        console.log('toComparewith',Boolean(toComparewith), toComparewith,'versus' ,firstCard.dataset.key);
-        console.log(firstCard,secondCard);
+        let toComparewith = typeof parametersGame.secondCard === 'undefined'? '': parametersGame.secondCard.dataset.key;
        
-        if ((firstCard.dataset.key !== toComparewith ) && toComparewith){
-            console.log('flip back');
-            flipCardsBack();  
+        if ((parametersGame.firstCard.dataset.key !== toComparewith ) && toComparewith){
+            flipCardsBack();   // flip the cards back if no match
         }else{
-            secondCard = undefined;
+            parametersGame.secondCard = undefined; // otherwise set the second to undefined in order to make the if condition correct
         }
 
        
@@ -216,38 +228,37 @@ function closeCardsModal(){
 
 function checkCardsMatch(cardContent){
     //if clicked on the same card
-    if(firstCard.id === secondCard.id){
-        firstCard.classList.remove('flip');
-        totalFlips--;
+    if(parametersGame.firstCard.id === parametersGame.secondCard.id){
+        parametersGame.firstCard.classList.remove('flip');
+        parametersGame.totalFlips--;
     // if clicked on the matched card
-    }else if(firstCard.dataset.key === secondCard.dataset.key){
+    }else if(parametersGame.firstCard.dataset.key === parametersGame.secondCard.dataset.key){
         showCardsModal(cardContent);
         keepCardsFliped(); 
-        correctFlips++;
+        parametersGame.correctFlips++;
     // no match
     }else{
-        console.log('no match');
         showCardsModal(cardContent);
         
     }
+    // prepare the win board
     showWinBoard();
     
 };
 
 function keepCardsFliped(){
-    firstCard.removeEventListener('click',flipCard);
-    secondCard.removeEventListener('click',flipCard);
+    parametersGame.firstCard.removeEventListener('click',flipCard);
+    parametersGame.secondCard.removeEventListener('click',flipCard);
 }
 
 function flipCardsBack(){
-    console.log('flip cards back')
-    freezBoard = true;
+    parametersGame.freezBoard = true;
 
     setTimeout(() => {
-        firstCard.classList.remove('flip');
-        secondCard.classList.remove('flip');
-        freezBoard = false;
-        secondCard = undefined;
+        parametersGame.firstCard.classList.remove('flip');
+        parametersGame.secondCard.classList.remove('flip');
+        parametersGame.freezBoard = false;
+        parametersGame.secondCard = undefined; // set the second to undefined in order to make the if condition in closeModal() correct
     }, 800);
 
 }
@@ -258,7 +269,7 @@ function flipCardsBack(){
  */
 function displayFlips(){
     let textFlips = document.getElementById('total-flips');
-    textFlips.innerText = `${totalFlips}`;
+    textFlips.innerText = `${parametersGame.totalFlips}`;
 }
 
 /**
@@ -269,8 +280,8 @@ const textTime = document.getElementById('total-time');
 
 let getTime = setInterval(function(){
     timeSecond++;
-    let seconds = (timeSecond % parameters.secondsInMinute).toString().padStart(2,'0');
-    let minutes = (Math.floor(timeSecond / parameters.secondsInMinute)).toString().padStart(2,'0');
+    let seconds = (timeSecond % parametersGame.secondsInMinute).toString().padStart(2,'0');
+    let minutes = (Math.floor(timeSecond / parametersGame.secondsInMinute)).toString().padStart(2,'0');
     textTime.innerText = `${minutes}:${seconds}`;
 
 },1200);
@@ -286,7 +297,7 @@ function showWinBoard(){
     const winBoardFlips = document.querySelector("#win-board__flips");
 
 
-    if (totalNumberCards === correctFlips){
+    if (totalNumberCards === parametersGame.correctFlips){
         clearInterval(getTime);
         
         const time = document.querySelector("#total-time").innerText;
@@ -294,8 +305,8 @@ function showWinBoard(){
                 
         winBoardTime.innerText = time;
         winBoardFlips.innerText = flips;
-
         winBoard.classList.add('active');
+
         setTimeout(() => {
             winBoard.classList.remove('active');
             // remove the pop up window of the last card
