@@ -123,6 +123,7 @@ The repository can also be cloned locally, the steps are following:
     - [IEEP](https://ieep.eu/publications/carbon-inequality-in-2030-per-capita-consumption-emissions-and-the-1-5c-goal/#:~:text=To%20stay%20within%20this%20guardrail,every%20person%20on%20Earth%20today.)
     - [Fontawesome](https://fontawesome.com/)
     - [Temperature stripes](https://showyourstripes.info/s/globe) by [Ed Hawkins](http://www.met.reading.ac.uk/~ed/home/index.php)
+- [Stack Overflow](https://stackoverflow.com/), [W3schools](https://www.w3schools.com/js/default.asp), [MDN Web Docs](https://developer.mozilla.org/en-US/)
 
 ### Technologies & Tools
 - [Google Fonts]() was used to import the fonts into the style.css file.
