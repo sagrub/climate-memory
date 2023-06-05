@@ -1,4 +1,4 @@
-/* general styling */
+/* ********* general styling ********/
 html {
     box-sizing: border-box;
 }
@@ -24,7 +24,6 @@ html {
 }
 
 
-
 body{
     background: url(../images/background_2000px.webp) no-repeat center center/cover;
     height: 100vh;
@@ -38,6 +37,7 @@ body{
 
 }
 
+/* ********* styling of the mutual components ********/
 h1,h2,h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -130,7 +130,7 @@ h1,h2,h2 {
     margin-top: 20px;
 }
 
-
+/* ********* homepage ********/
 .modal{
     /* inspiration from https://www.youtube.com/watch?v=MBaw_6cPmAw */
     position: fixed;
@@ -167,6 +167,7 @@ h1,h2,h2 {
 }
 
 #overlay{
+    /* inspiration from https://www.youtube.com/watch?v=MBaw_6cPmAw */
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -183,7 +184,7 @@ h1,h2,h2 {
     opacity: 1;
 }
 
-/* form */
+/* ********* contact modal ********/
 .form .btn {
     width: 80px;
     padding: 5px;
@@ -224,13 +225,8 @@ h1,h2,h2 {
     font-weight: bold;
 }
 
-/* board game */
+/* ********* game page ********/
 .game{
-    /* position:absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%); */
-
     display: flex;
     flex-direction: column;
     margin: 5vh auto;
@@ -252,13 +248,12 @@ h1,h2,h2 {
 }
 
 
-
-/* code inspiration for the css style of card, card__front, card__back
-from the websites 
-https://webtips.dev/memory-game-in-javascript?utm_content=cmp-true,
-https://www.youtube.com/watch?v=ZniVgo8U7ek */
-
 .card{
+    /* code inspiration for the css style of card, card__front, card__back
+    from the websites 
+    https://webtips.dev/memory-game-in-javascript?utm_content=cmp-true,
+    https://www.youtube.com/watch?v=ZniVgo8U7ek */
+
     width: 3.5rem;
     height: 3.5rem;
     position: relative;
@@ -307,9 +302,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 }
 
 .card__front{
-    /* background-color: var(--primary-color); */
     transform: rotateY(180deg);
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -376,7 +369,6 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
     border: solid 4px var(--primary-color)
 }
 
-
 .win-board{
     background-color: var(--white);
     height: 60%;
@@ -397,11 +389,16 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 }
 
 
-
+/* *************************************************/
+/*        MEDIA QUERY min 350px                    */
+/* *************************************************/
 @media screen and (min-width:350px){
+    /* ********* styling of mutual components ********/
     .buttons{
         gap: 20px;
     }
+
+    /* ********* game page ********/
     .game__board{
         grid-template-rows: repeat(4,5rem);
         grid-template-columns: repeat(3,5rem);
@@ -426,10 +423,16 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
 }
 
 
+/* *************************************************/
+/*        MEDIA QUERY min 420px                    */
+/* *************************************************/
 @media screen and (min-width: 420px) {
+    /* ********* styling of mutual components ********/
     .btn{
         padding: 8px;
     }
+
+    /* ********* homepage ********/
     .container{
         height: auto;
         max-width: 600px;
@@ -453,6 +456,7 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         max-height: 90%;
     }
 
+    /* ********* game page ********/
     .game{
         position:static;
         -webkit-transform: none !important;
@@ -482,10 +486,12 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
   
 }
 
+
+/* *************************************************/
+/*        MEDIA QUERY min 660px                    */
+/* *************************************************/
 @media screen and (min-width: 660px ) {
-    /* .container{
-        overflow: visible;
-    } */
+    /* ********* styling of the mutual components ********/
     .buttons{
         flex-direction: row;
     }
@@ -498,10 +504,12 @@ https://www.youtube.com/watch?v=ZniVgo8U7ek */
         padding: 10px 30px 50px;
     }
 
+    /* ********* form modal ********/
     .form{
         max-width: 400px;
     }
 
+    /* ********* game page ********/
     .game{
         margin: auto;
     }
