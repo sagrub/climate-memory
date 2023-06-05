@@ -42,11 +42,12 @@ h1,h2,h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     display: block;
-    
+
 }
 
 .paragraph{
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .btn{
@@ -320,6 +321,8 @@ h1,h2,h2 {
     text-align: center;
     padding: 2px;
     border-radius: 4px;
+    /* if the text is too large on the small card hide it, it will be zoomed on the modal anyway */
+    overflow:hidden; 
 }
 
 .card__img{
