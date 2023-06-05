@@ -5,7 +5,7 @@ const openModal = (modalId) => {
     const modal = document.getElementById(modalId);
     if (modal == null) return;
     modal.classList.add('active');
-}
+};
 
 
 /**
@@ -17,7 +17,7 @@ const closeModal = () => {
         if (modal == null) return;
         modal.classList.remove('active');
     }
-}
+};
 
 
 /**
@@ -27,7 +27,7 @@ const closeModal = () => {
 const MakeBackgroundDark = () =>{
     const overlay = document.querySelector('#overlay');
     overlay.classList.add('active');
-}
+};
 
 
 /**
@@ -37,7 +37,7 @@ const MakeBackgroundDark = () =>{
 const MakeBackgroundNormal = () => {
     const overlay = document.querySelector('#overlay');
     overlay.classList.remove('active');
-}
+};
 
 
 const addListenerOnButtons = () => {
@@ -53,7 +53,7 @@ const addListenerOnButtons = () => {
                     MakeBackgroundDark();
                     break;
                 case 'btn-open-play':
-                    window.location.href = "game.html";;
+                    window.location.href = "game.html";
                     break;
                 case 'btn-open-story':
                     openModal('modal-story');
@@ -82,7 +82,7 @@ const addListenerOnButtons = () => {
             
         });
     });
-}
+};
 
 addListenerOnButtons();
 
