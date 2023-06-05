@@ -129,7 +129,7 @@ The repository can also be cloned locally, the steps are following:
 - [Color Pallete](https://coolors.co/palette/006d77-83c5be-edf6f9-ffddd2-e29578) was used to select accessible colors.
 - [Image Compressor](https://tinypng.com/) was used to compress the images.
 - [Image Converter](https://ezgif.com/) was used to convert all images in the webp format.
-- [Favicon](https://favicon.io/favicon-converter/) was used to generate the code and files for the webpage favicon.
+- [Favicon](https://realfavicongenerator.net/) was used to generate the code and files for the webpage favicon.
 - [GitHub](https://github.com/) was used to store the code and host the website.
 - [Gitpod](https://www.gitpod.io/) is an IDE and was used to develop the website.
 - [Formsubmit](https://formsubmit.co/) was used for the form submission.
