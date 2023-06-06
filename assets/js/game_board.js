@@ -76,11 +76,13 @@ const addCardAttributes = ((card, cardFront, cardBack, cardData, index ) => {
  * depending on the type of cards (i.g. img or txt).
  */
 const addCardContent = ((cardFront, cardData) => {
+    // text card
     if (cardData.type === parameters.cardTypes[0]) {
         cardFront.innerHTML = `<p class="card__txt"> ${cardData.text} </p>`;
-    }       
+    }
+    // image card 
     else if (cardData.type === parameters.cardTypes[1]){
-        cardFront.innerHTML = `<div class="card__img"><img class="img" src="${cardData.img}"></div>`;
+        cardFront.innerHTML = `<div class="card__img"><img class="img" src="${cardData.img}" alt="${cardData.alt}"></div>`;
     }else{
         console.info('not implemented for such type');
     }

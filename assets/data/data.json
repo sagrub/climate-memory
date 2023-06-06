@@ -3,58 +3,67 @@
         "id": 0,
         "img": "./assets/images/game_fridge.webp",
         "img-type": "figure",
-        "text": "3 billion people use less energy, on an annual per capita basis, than a standard American refrigerator"
+        "text": "3 billion people use less energy, on an annual per capita basis, than a standard American refrigerator.",
+        "alt": "icon of a fridge"
     },
     {
         "id": 1,
         "img": "./assets/images/game_stripes_small.webp",
         "img-type": "img",
-        "text": " The progression from blue (cooler) to red (warmer) stripes portrays the increase of average global temperature from 1850 to 2018."
+        "text": " The progression from blue (cooler) to red (warmer) stripes portrays the increase of average global temperature from 1850 to 2018.",
+        "alt":" image of temperature stripes"
     },
     {
         "id": 2,
         "img": "./assets/images/game_airplane.webp",
         "img-type": "icon",
-        "text": "Air traveling counts for about 4% of our total climenate impact and yet 80% of the world's population have never set foot on an aeroplane."
+        "text": "Air traveling counts for about 4% of our total climate impact and yet 80% of the world's population have never set foot on an aeroplane.",
+        "alt":"icon of an airplane"
  
     },
     {
         "id": 3,
         "img": "./assets/images/game_football.webp",
         "img-type": "icon",
-        "text": "Every second, an area the size of a football field of forest is cut down."
+        "text": "Every second, an area the size of a football field of forest is cut down.",
+        "alt":"icon of a football ball"
     },
     {
         "id": 4,
         "img": "./assets/images/game_plastic_bottle.webp",
         "img-type": "icon",
-        "text": "Every year, an estimated 8 milion tonnes of plastic waste are dumped into our oceans."
+        "text": "Every year, an estimated 8 milion tonnes of plastic waste are dumped into our oceans.",
+        "alt":"icon of a plastic bootle"
 
     },
     {
         "id": 5,
         "img": "./assets/images/game_emission_per_capital.webp",
         "img-type": "figure",
-        "text": "The world’s largest per capita CO2 emitters is the Qatar with about 35 tonnes and in contrast the Democratic Republic of Congo has the lowest emissions with 0.03 tonnes in 2021"
+        "text": "The world’s largest per capita CO2 emitters is the Qatar with about 35 tonnes and in contrast the Democratic Republic of Congo has the lowest emissions with 0.03 tonnes in 2021.",
+        "alt":"displayed figure of 35 and 0.03 tonnes"
 
     },
     {
         "id": 6,
         "img": "./assets/images/game_emission_sustainable.webp",
-        "img-type": "icon",
-        "text": "To live sustainable, every person on Earth would need to emit an average of just 2.3 tonnes of CO2 per year by 2030"
+        "img-type": "figure",
+        "text": "To live sustainable, every person on Earth would need to emit an average of just 2.3 tonnes of CO2 per year by 2030.",
+        "alt":"displayed figure of 2.3 tonnes"
     },
     {
         "id": 7,
         "img": "./assets/images/game_cow.webp",
         "img-type": "icon",
-        "text": "Producing a kilogram of beef emits 60 kilograms of greenhouse gases (CO2-equivalents). While peas emits just 1 kilogram per kg."
+        "text": "Producing a kilogram of beef emits 60 kilograms of greenhouse gases (CO2-equivalents). While peas emits just 1 kilogram per kg.",
+        "alt":"icon of a cow"
     },
     {
         "id": 8,
         "img": "./assets/images/game_plant.webp",
         "img-type": "icon",
-        "text": "Shifting towards a plant-base diet could save us up to 8 billion tonnes of C02 every year."
+        "text": "Shifting towards a plant-base diet could save us up to 8 billion tonnes of C02 every year.",
+        "alt":" icon of a hand holding a plant"
     }
     
 ]
