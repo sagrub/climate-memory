@@ -29,15 +29,15 @@
 
 </head>
 <body>
-
-    <div class="container">
+    <!-- Start: Board -->
+    <section class="container">
         <h1 class="container__title">Have fun!</h1>
         <div class="game">
+            <!-- Here is the game board generated using javascript -->
             <div class="game__board">
                 
             </div>
             
-
             <div class="game__score">
                 <div class="game__flips">Flips: <span id="total-flips">0</span></div>
                 <div class="game__score">Time: <span id="total-time">00:00</span></div>
@@ -48,12 +48,15 @@
                 <button data-btn="btn-home" class="btn btn--primary" aria-label="Go Back.">Home</button>
             </div>
         </div>
-    </div>
-    
+    </section>
+    <!-- End: Board -->
 
+    <!-- Start: Card Modal - generated using javascript -->
+    <section class="card__modal"></section>
+    <!-- End: Card Modal -->
     
-    <div class="card__modal"></div>
-    <div class="win-board">
+    <!-- Start: Win Board Modal -->
+    <section class="win-board">
         <div class="win-board__header">
             <h2 class="win-board__title">It's win!</h2>
         </div>
@@ -61,12 +64,13 @@
             <p class="paragraph">Flips: <span id="win-board__flips"> 32</span> </p>
             <p class="paragraph">Time: <span id="win-board__time">00:23</span></p>
         </div>
-    </div>
+    </section>
+    <!-- End: Win Board Modal -->
+
     <div id="overlay"></div>
 
     
-    
-    
+    <!-- Javascript -->
     <script type="module" src="./assets/js/game_board.js"></script>
    
 </body>
