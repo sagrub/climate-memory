@@ -30,119 +30,125 @@
 
 </head>
 <body>
-    <!-- Start: Home section -->
-    <section class="container">
+    <main class="wrapper">
+        <!-- Start: Home section -->
+        <section class="container container--small">
 
-        <h1 class="container__title">Climate memory</h1>
+            <h1 class="container__title">Climate memory</h1>
 
-        <div class="container__content">
-            <p class="paragraph">
-                The Climate Memory game was developed to raise the awareness of the climate change. The game attempts to comunicate the facts of the human activities effecting and even destroying our nature, in an entertaining form. 
-            </p>
+            <div class="container__content">
+                <p class="paragraph">
+                    The Climate Memory game was developed to raise the awareness of the climate change. The game attempts to comunicate the facts of the human activities effecting and even destroying our nature, in an entertaining form. 
+                </p>
 
-            <div class="buttons">
-                <button data-btn="btn-open-how-to" class="btn btn--secondary" aria-label="Navigate to the How to play pop up window">How to play</button>
-                <button data-btn="btn-open-play" class="btn btn--primary" aria-label="Navigate to the the game and start the game">Start game</button>
-                <button data-btn="btn-open-story" class="btn btn--secondary" aria-label="Navigate to the Story behind pop up window">Story behind</button>
+                <div class="buttons">
+                    <button data-btn="btn-open-how-to" class="btn btn--secondary" aria-label="Navigate to the How to play pop up window">How to play</button>
+                    <button data-btn="btn-open-play" class="btn btn--primary" aria-label="Navigate to the the game and start the game">Start game</button>
+                    <button data-btn="btn-open-story" class="btn btn--secondary" aria-label="Navigate to the Story behind pop up window">Story behind</button>
+                </div>
+
+                <p class="paragraph">
+                    Would you like to play with the cards of yours. Sent me your suggestions about climate change facts or tips. An intersting content, which could help to rise the awareness about this topic, is more than welcome! 
+                </p>
+                <div class="buttons">
+                    <button data-btn="btn-contact" class="btn btn--secondary" aria-label="Show Contact pop up window">Contact me</button>
+                </div>
             </div>
 
-            <p class="paragraph">
-                Would you like to play with the cards of yours. Sent me your suggestions about climate change facts or tips. An intersting content, which could help to rise the awareness about this topic, is more than welcome! 
-            </p>
-            <div class="buttons">
-                <button data-btn="btn-contact" class="btn btn--secondary" aria-label="Show Contact pop up window">Contact me</button>
+        </section>
+        <!-- End: Home section -->
+
+        <!-- Start: Modal How to play -->
+        <section class="modal" id="modal-how-to">
+            <div class="modal__header">
+                <button data-btn="btn-close" class="btn btn--close">&times;</button>
+                <h2 class="modal__title">How to play</h2>
             </div>
-        </div>
+        
+            <div class="modal__body">
+                <p class="paragraph">
+                    The play board consist of 12 cards in total, i.e. six card pairs. A pair is represented by a card containing an image and a card containing a text description of that image.
+                    The goal is to find all six matchies without any time limation. Please read the text carefully so that you can match the card easily.
+                </p>
 
-    </section>
-    <!-- End: Home section -->
-
-    <!-- Start: Modal How to play -->
-    <section class="modal" id="modal-how-to">
-        <div class="modal__header">
-            <button data-btn="btn-close" class="btn btn--close">&times;</button>
-            <h2 class="modal__title">How to play</h2>
-        </div>
-       
-        <div class="modal__body">
-            <p class="paragraph">
-                The play board consist of 12 cards in total, i.e. six card pairs. A pair is represented by a card containing an image and a card containing a text description of that image.
-                The goal is to find all six matchies without any time limation. Please read the text carefully so that you can match the card easily.
-            </p>
-
-            <div class="buttons">
-                <button data-btn="btn-open-play" class="btn btn--primary">Start game</button>
+                <div class="buttons">
+                    <button data-btn="btn-open-play" class="btn btn--primary">Start game</button>
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- End: Modal How to play -->
-    
-    <!-- Start: Modal Story behind -->
-    <section class="modal" id="modal-story">
-        <div class="modal__header">
-            <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window." >&times;</button>
-            <h2 class="modal__title">Story behind</h2>
-        </div>
-       
-        <div class="modal__body">
-            <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptate ipsum provident eveniet labore dolore eos explicabo. Molestias quibusdam, temporibus optio necessitatibus, praesentium iste at reprehenderit a amet repellendus quidem.
-            Sint dolorum maiores molestias in nobis. Facere quidem iste, cum quis earum ex vitae distinctio omnis minus sequi, cupiditate, est error aperiam. Repellat minus accusantium dolorum ullam vitae ipsum suscipit.
-            Id fugiat facilis deleniti quo ab culpa minus saepe expedita reprehenderit sunt exercitationem laborum illum, quod libero voluptate magni asperiores porro? Veniam quia tempore laudantium quae ullam sed incidunt architecto.</p>
-        </div>
-    </section>
-    <!-- End: Modal Story behind -->
+        </section>
+        <!-- End: Modal How to play -->
+        
+        <!-- Start: Modal Story behind -->
+        <section class="modal" id="modal-story">
+            <div class="modal__header">
+                <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window." >&times;</button>
+                <h2 class="modal__title">Story behind</h2>
+            </div>
+        
+            <div class="modal__body">
+                <p class="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore voluptate ipsum provident eveniet labore dolore eos explicabo. Molestias quibusdam, temporibus optio necessitatibus, praesentium iste at reprehenderit a amet repellendus quidem.
+                Sint dolorum maiores molestias in nobis. Facere quidem iste, cum quis earum ex vitae distinctio omnis minus sequi, cupiditate, est error aperiam. Repellat minus accusantium dolorum ullam vitae ipsum suscipit.
+                Id fugiat facilis deleniti quo ab culpa minus saepe expedita reprehenderit sunt exercitationem laborum illum, quod libero voluptate magni asperiores porro? Veniam quia tempore laudantium quae ullam sed incidunt architecto.</p>
+            </div>
+        </section>
+        <!-- End: Modal Story behind -->
 
-    <!-- Start: Modal Contact -->
-    <section class="modal" id="modal-contact">
-        <div class="modal__header">
-            <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window.">&times;</button>
-            <h2 class="modal__title">Get in touch</h2>
-        </div>
-       
-        <div class="modal__body">
+        <!-- Start: Modal Contact -->
+        <section class="modal" id="modal-contact">
+            <div class="modal__header">
+                <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window.">&times;</button>
+                <h2 class="modal__title">Get in touch</h2>
+            </div>
+        
+            <div class="modal__body">
 
-            <p class="paragraph">I am happy to hear from you! <a class="link" target="_blank" href="https://github.com/brodsa" aria-label="Go to the GitHub of Sarka ">Sarka</a> </p>
+                <p class="paragraph">I am happy to hear from you! <a class="link" target="_blank" href="https://github.com/brodsa" aria-label="Go to the GitHub of Sarka ">Sarka</a> </p>
 
-            <div class="form">
-                <form action="https://formsubmit.co/sarka.grubner@gmail.com" method="POST">
-                    <label for="fname">First Name</label>
-                    <input class="text-input" type="text" name="first_name" id="fname" required>
+                <div class="form">
+                    <form action="https://formsubmit.co/sarka.grubner@gmail.com" method="POST">
+                        <label for="fname">First Name</label>
+                        <input class="text-input" type="text" name="first_name" id="fname" required>
 
-                    <label for="lname">Last Name</label>
-                    <input class="text-input" type="text" name="last_name" id="lname" required>
+                        <label for="lname">Last Name</label>
+                        <input class="text-input" type="text" name="last_name" id="lname" required>
 
-                    <label for="email">Email Address</label>
-                    <input class="text-input" type="email" name="email" id="email" required placeholder="@">
+                        <label for="email">Email Address</label>
+                        <input class="text-input" type="email" name="email" id="email" required placeholder="@">
 
-                    <label for="message">Message</label>
-                    <textarea class="text-field" name="message" id="message" cols="10" rows="5" placeholder="Hi Sarka,
-                    "></textarea>
+                        <label for="message">Message</label>
+                        <textarea class="text-field" name="message" id="message" cols="10" rows="5" placeholder="Hi Sarka,
+                        "></textarea>
 
-                    <div class="buttons">
-                        <input type="hidden" name="_next" value="https://brodsa.github.io/climate-memory/thank_you.html">
-                        <input class="btn btn--primary"  type="submit" value="Send" >
-                        <input class="btn" type="reset" value="Clear">
-                    </div>
+                        <div class="buttons">
+                            <input type="hidden" name="_next" value="https://brodsa.github.io/climate-memory/thank_you.html">
+                            <input class="btn btn--primary"  type="submit" value="Send" >
+                            <input class="btn" type="reset" value="Clear">
+                        </div>
 
-                </form>
+                    </form>
+                </div>
+
             </div>
 
-        </div>
-
-
-    </section>
-    <!-- End: Modal Contact -->
-    
-    <div id="overlay"></div>
-
+        
+        </section>
+        <!-- End: Modal Contact -->
+        
+        <div id="overlay"></div>
+    </main>
     <!-- Start: Footer -->
     <footer>
-
+        <div class="copyright">
+            <p class="paragraph">&copy; 2023 Climate memory game, created by 
+                <a class="copyright__link" href="mailto:sarka.grubner@gmail.com" aria-label="Email on the developer of the website,">Sarka Grubner </a> 
+                <a href="https://github.com/brodsa" target="_blank" aria-label="Github profile of the developer will be opened in a new window."><i class="fa-brands fa-github"></i></a> </p>
+        </div>
     </footer>
     <!-- End: Footer -->
 
     <!-- Start: Javascript -->
     <script type="module" src="./assets/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d1e2136726.js" crossorigin="anonymous"></script>
     <!-- End: Javascript -->
 
     <!-- Start: noscript -->
