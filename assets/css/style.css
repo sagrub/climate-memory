@@ -107,6 +107,7 @@ h1,h2,h2 {
 .container--small{
     height: 80%;
     width: 80%;
+
 }
 
 
@@ -162,7 +163,6 @@ footer{
 
 .copyright .paragraph{
     color:var(--white);
-    margin: 0;
 }
 
 .fa-brands{
@@ -268,7 +268,7 @@ footer{
 .game{
     display: flex;
     flex-direction: column;
-    margin: 5vh auto;
+    /* margin: 5vh auto; */
 }
 
 .game__board{
@@ -476,7 +476,7 @@ footer{
     /* ********* homepage ********/
     .container{
         height: auto;
-        max-width: 600px;
+        /* max-width: 600px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
