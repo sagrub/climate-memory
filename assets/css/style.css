@@ -436,24 +436,24 @@ footer{
 @media screen and (min-width:350px){
     /* ********* styling of mutual components ********/
     .buttons{
-        gap: 20px;
+        gap: 15px;
     }
 
     /* ********* game page ********/
     .game__board{
-        grid-template-rows: repeat(4,5rem);
-        grid-template-columns: repeat(3,5rem);
+        grid-template-rows: repeat(4,4.5rem);
+        grid-template-columns: repeat(3,4.5rem);
         gap: 4px;
     }
     
     .card {
-        width: 5rem;
-        height: 5rem;
+        width: 4.5rem;
+        height: 4.5rem;
     }
 
     .card__img{
-        width: 4.6rem;
-        height: 4.6rem;
+        width: 4.2rem;
+        height: 4.2rem;
     }
 
     .card__modal{
