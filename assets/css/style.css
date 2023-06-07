@@ -62,7 +62,7 @@ h1,h2,h2 {
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
-    padding: 10px 30px ;
+    padding: 2dvw 5dvw ;
 }
 
 .navigation__link, .navigation__link .fa-leaf{
@@ -123,7 +123,7 @@ h1,h2,h2 {
 }
 
 .container--small{
-    height: 80%;
+    max-height: 80%;
     width: 80%;
 
 }
@@ -169,16 +169,17 @@ footer{
     height: 5dvh;
     display: flex;
     align-items: center;
+    justify-content: center
 }
 
-/* .copyright{
+.copyright{
     color: var(--white);
     margin: 2px 10px;
     display: flex;
     align-items: center;
     font-size: 0.8rem;
     
-} */
+}
 
 .copyright .paragraph{
     color:var(--white);
@@ -494,17 +495,21 @@ footer{
 
     /* ********* homepage ********/
     .container{
+ 
+        
+    }
+
+    .container--small{
+        margin: 50px;
+    }
+
+    .container--large{
         height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 50px;
-        
-    }
-
-    .container--small{
-        width: 600px;
     }
 
     .container__title{
@@ -557,6 +562,15 @@ footer{
     /* ********* styling of the mutual components ********/
     .buttons{
         flex-direction: row;
+    }
+
+    .container--small{
+        /* max-width: 600px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        margin: 0 20dvw;
     }
 
     .modal{
