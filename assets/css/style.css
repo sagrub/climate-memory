@@ -62,7 +62,8 @@ h1,h2,h2 {
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
-    padding: 2dvw 5dvw ;
+    padding: 2dvw 5dvw;
+    background: linear-gradient(0deg, rgba(88,88,88,0) 0%, rgba(6,6,6,0.8) 100%);
 }
 
 .navigation__link, .navigation__link .fa-leaf{
@@ -128,6 +129,15 @@ h1,h2,h2 {
 
 }
 
+.container__game{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
 
 .container__title{
     text-align: center;
@@ -169,8 +179,11 @@ footer{
     height: 5dvh;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
 }
+
 
 .copyright{
     color: var(--white);
@@ -183,6 +196,8 @@ footer{
 
 .copyright .paragraph{
     color:var(--white);
+    padding: 10px;
+    margin: 0;
 }
 
 .fa-github, .fa-leaf{
@@ -503,13 +518,8 @@ footer{
         margin: 50px;
     }
 
-    .container--large{
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 50px;
+    .container__game{
+   
     }
 
     .container__title{
