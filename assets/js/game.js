@@ -47,7 +47,7 @@ const startGame = () => {
         let minutes = (Math.floor(timeSecond / parametersGame.secondsInMinute)).toString().padStart(2,'0');
         textTime.innerText = `${minutes}:${seconds}`;
     },1200);
-}
+};
 
 /**
  * Flip the card and show the card modal automatically.
