@@ -1,7 +1,7 @@
 ## Introduction
 The Climate Memory website was created to raise the awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people include our childern.
 
-The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The content of the fliped card is everytime magnified in order to read the text or see the image properly.
+The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The content of the flipped card is everytime magnified in order to read the text or see the image properly.
 
 The game is particularly for adults or children who can already read. The website could be used at schools for educative purposes as it provides evidence-based facts.
 
@@ -99,15 +99,16 @@ The game board is loacated in the middle of the webpage.
 The game board contains the following elements:
 - **Card Board** 
     - The board consists of 6 card pairs leading to the 12 flip cards in total. Each pair is represented by a text and an image card. The image card can be an icon, a figure or an picture. 
-    - The user is allowed to click on two cards only. When the user click on a card. The card is fliped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card. Four situation can occure:
-        - The card stayes fliped if the card is the first fliped one.
+    - The card board is fully built with JavaScript. The data are located in the json file and contains information for 9 card pairs. When the user clicks on Start game, the data card are randomly selected. Thus, the user can play with the different set of cards. 
+    - The user is allowed to click on two cards only. When the user click on a card. The card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card. Four situation can occure:
+        - The card stayes flipped if the card is the first flipped one.
         - The cards flip back in case of no match.
         - The cards stay flipped if they matches.
-        - The card is flip back in case the same card was fliped.
-    - Several examples of the fliped card are following:
-        - [A text card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
-        - [An image card with an icon is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
-        - [A image card with a figure is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
+        - The card is flip back in case the same card was flipped.
+    - Several examples of the flipped card are following:
+        - [A text card is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
+        - [An image card with an icon is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
+        - [A image card with a figure is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
         - [Two cards match](./assets/docs/ux/ux_features_game_board_match.png)
         - [All matches are founded](./assets/docs/ux/ux_features_game_board_all_matches.png)
 
@@ -121,7 +122,7 @@ The game board contains the following elements:
         - **Refresh Button** refreshes the game and the user starts the game from the beginning
         - **Home Button** navigates the user back to the homepage.
 - **Win Board**
-    - When all cards are fliped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
+    - When all cards are flipped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
     - The board automatically disappears and the user can start the new game by clicking on the Refresh Button, see [Win Board](./assets/docs/ux/ux_features_game_board_win_board.png)
 
 
@@ -129,6 +130,20 @@ The game board contains the following elements:
 The webpage additionally contains two hidden pages:
 - **Thank you** page is shown after the form submission.
 - **404** page is displayed in case of an invalid URL.
+
+### Differences to Design
+- Topics: 
+    - The initial plan was to have the cards separated into topics, which the user can select. This will be implemented in the next iteration.
+    - Possible solution is mainly to modified the data load in order to generate the cards content. 
+        - The pop up window offering the user to click on different buttons related to the diferent topics.
+        - Each topic is related to a separated json file, containing the data to generate the cards.
+        - The buttons have the event listener on click firing the load data function. The function received the path to the json file depending on the selected topic. 
+        - This would require to select all buttons with a specific data attribute and to use switch operator to get the correct data, i.e. load correct data. 
+- User Chart or Progress: There are two options. Either to use the [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or the [Google sheets API](https://developers.google.com/sheets/api/quickstart/js).
+
+### Future Enhancements
+- Additional language could be used to target more users.
+- More topics then intially planed to make the webpage more intersting and to raise the awarness even more.
 
 ## Testing
 In generally, the website was continously tested affter implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see the detailed <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>
