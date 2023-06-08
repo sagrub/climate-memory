@@ -126,6 +126,7 @@ h1,h2,h2 {
 .container--small{
     max-height: 80%;
     width: 80%;
+    max-width: 650px;
 
 }
 
