@@ -150,16 +150,19 @@ The webpage additionally contains two hidden pages:
 - More topics then intially planed to make the webpage more intersting and to raise even more the awareness.
 
 ## Testing
-In generally, the website was continously tested after implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see the detailed [testing report](./README_testing.md).
+In generally, the website was continously tested after implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see [the detailed testing report](./README_testing.md).
 
 
 ### Bugs & Issues
-Besides the issues reported in the <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>. There were other bugs to fix:
-- text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
-- the blue color of buttons on iphone; specify the color and set webkit
-- the scroll on does not work on the game board; justify-content: center was removed the height, width and max-height with max-width was added on the css class
-- the user clicks to fast on the card and the content of both card is displayed in the card modal; the function to disable clicking on the second card is called before the card modal appears.
-- my mentor pointed out missing the camel case  notation for two functions; corrected 
+Besides the issues reported in [the detailed testing report](./README_testing.md). There were other bugs to fix:
+
+|       Bug & Issue     | Solution |
+| --------------------- | ---------- |
+| The text in the modal card is sometimes cut off. | All classes specific to the type of card were removed (i.e. card__modal--txt) after closing the card modal. To read the text properly, the size of the modal was increased.|
+| The blue color of buttons on iPhones | The color was specify and `-webkit-appearance: none;` was set up on all selectors. |
+| The scroll on the game board does not work on mobile devices.    | The property `justify-content: center` was removed from the class. In addtion the height/width and max-height/width were added to the css class.  |
+| If the user clicks to fast on the card, the content of both cards is displayed in the card modal.  | The function makeBackgroundDark() was moved before the card modal appears. |
+| My mentor pointed out on using the PascalCase instead of camelCase naming convention on two functions| The naming was corrected. 
 ---
 
 ## Deployment
