@@ -43,11 +43,12 @@ The Lighthouse in Chrome DevTools evaluates the webpage for performance, accessi
     - [Thank you Pag](./assets/docs/validation/validation_lighthouse_pc_thank_you.png)
 
 ### JavaScript
-The [JShint](https://jshint.com/) static tool was considered to check the code rules of the Javascript source code. The source code is split into two js-files. No errors were found, see the detailed reports bellow:
+The [JShint](https://jshint.com/) static tool was considered to check the code rules of the Javascript source code. The source code is split into three js-files. No errors were found, see the detailed reports bellow:
 - [index.js](./assets/docs/validation/validation_js_index.png)
 - [game_board.js](./assets/docs/validation/validation_js_game_board.png)
+- [game.js](./assets/docs/validation/validation_js_game.png)
 
-Initial checker reported missing semicolons which were added. In addition, the advice to use the dot notation when working with the objects was adviced. This was changed as well. After that, two warnings were still reported for [game_board.js](./assets/docs/validation/validation_js_game_board.png). Both warnings are related to the tool configurations. The comments on the warnings are provided below
+Initial checker reported missing semicolons which were added. In addition, the dot notation was applied when working with the objects as adviced. After that, two warnings were still reported for [game_board.js](./assets/docs/validation/validation_js_game_board.png). Both warnings are related to the tool configurations. The comments on the warnings are provided below.
 - *missing semicolon*: This warning is not directly related to the missing semicolon but rather to the fact that it does not recognise the `await` operator. The JShint probably requires that the operator should be used inside the async function. There was an attempt to refactor the code. However, the change fired out more changes and fixing. Due to the lack of time, the process was stopped. The changes will be considered in a next iteration. It should also be noted, that based on the [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await), the usage of the operator in this way should be allowed.
 - *object spread property*: This warning is related to the usage of ES9 version, which cannot be configurated directly in configuration setup. There should be a walkaround by using `/* jshint esversion: 9 */` at the top of the code (a hint from the CI slack community).
 
