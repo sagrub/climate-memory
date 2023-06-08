@@ -208,6 +208,7 @@ function closeCardsModal(){
             }else if(item.includes(parameters.cardTypes[1])){
                 cardsModal.classList.remove('card__modal--img'); 
             }else{
+                console.log(item);
                 console.info('not implemented');
             }
         });
@@ -253,6 +254,8 @@ function checkCardsMatch(cardContent){
  * The function is used in case the is a match.
  */
 function keepCardsFliped(){
+    parametersGame.firstCard.style.transform = "rotateY(180deg) scale(1.05)";
+    parametersGame.secondCard.style.transform = "rotateY(180deg) scale(1.05)";
     parametersGame.firstCard.removeEventListener('click',flipCard);
     parametersGame.secondCard.removeEventListener('click',flipCard);
 }
