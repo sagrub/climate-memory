@@ -131,6 +131,7 @@ The webpage additionally contains two hidden pages:
 - **404** page is displayed in case of an invalid URL.
 
 ## Testing
+In generally, the website was continously tested affter implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools.
 
 ### HTML 
 - [Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Findex.html)
