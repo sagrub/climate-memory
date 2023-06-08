@@ -150,7 +150,7 @@ In generally, the website was continously tested after implementing a feature or
 
 
 ### Bugs & Issues
-Besides the issues report in the <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>. There were other bugs to fix:
+Besides the issues reported in the <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>. There were other bugs to fix:
 - text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
 - the blue color of buttons on iphone; specify the color and set webkit
 - the scroll on does not work on the game board; TODO
@@ -226,3 +226,4 @@ The repository can also be cloned locally, the steps are following:
 - [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE) was used to create wireframes.
 
 ## Acknowledgements
+I would like to thank my mentors, Gareth and Daisy McGirr, for their guidance throughout my project and their valuable inputs. I would like to give a mention to a friend of my husband for his time and for giving me valuable feedback on my source code. He has provided me with information about the best practices. And my special thanks go to my husband for being supportive during the development of the webpage.
