@@ -62,13 +62,16 @@ h1{
 }
 
 .navigation {
+    padding: 2dvh 5dvw;
+    background: linear-gradient(0deg, rgba(88,88,88,0) 0%, rgba(6,6,6,0.8) 100%);
+}
+
+.navigation__link{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: baseline;
     gap: 10px;
-    padding: 2dvh 5dvw;
-    background: linear-gradient(0deg, rgba(88,88,88,0) 0%, rgba(6,6,6,0.8) 100%);
 }
 
 .navigation__link, .navigation__link .fa-leaf{
