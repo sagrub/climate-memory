@@ -32,28 +32,22 @@
 
     <!-- Start: Header with two navigation icons -->
     <header class="header">
-        <nav>
-            <div class="navigation">
-                <div class="navigation__link"> 
-                    <i class="fa-solid fa-leaf">
-                        <a href="index.html" aria-label="Home"> </a>
-
-                    </i>
-                </div>
-                <div class="navigation__link">
-                    <i class="fa-brands fa-github">
-                        <a href="https://github.com/brodsa" target="_blank" aria-label="Github profile of the developer will be opened in a new window."></a>
-                    </i>
-                </div>
+        <div class="navigation">
+            <div><a class="navigation__link" href="index.html" aria-label="Home">  
+                <i class="fa-solid fa-leaf"></i>
             </div>
-        </nav>
-    </header>
-    <!-- Start: Header with two navigation icons -->
+            <div>
+                <h1 class="navigation__link">Climate memory</h1>
+            </div>
+            </a>
+        </div>
+</header>
+<!-- Start: Header with two navigation icons -->
 
     <main class="wrapper">
         <!-- Start: Board -->
         <section class="container container__game">
-            <h1 class="container__title" id="game_title">Have fun!</h1>
+            <h2 class="container__title" id="game_title">Have fun!</h2>
             <div class="game">
                 <!-- Here is the game board generated using javascript -->
                 <div class="game__board">
@@ -79,7 +73,7 @@
         <!-- Start: Win Board Modal -->
         <section class="win-board">
             <div class="win-board__header">
-                <h2 class="win-board__title">It's a win!</h2>
+                <h3 class="win-board__title">It's a win!</h3>
             </div>
             <div class="win-board__body">
                 <i class="fa-solid fa-leaf"></i>

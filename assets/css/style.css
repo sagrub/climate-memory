@@ -38,7 +38,11 @@ h1,h2,h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     display: block;
+    text-transform: capitalize;
+}
 
+h1{
+    text-transform: uppercase;
 }
 
 .wrapper{
@@ -60,14 +64,18 @@ h1,h2,h2 {
 .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 50px;
-    padding: 2dvw 5dvw;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+    padding: 2dvh 5dvw;
     background: linear-gradient(0deg, rgba(88,88,88,0) 0%, rgba(6,6,6,0.8) 100%);
 }
 
 .navigation__link, .navigation__link .fa-leaf{
-    font-size: 1.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--white);
+    
 }
 
 .paragraph{
@@ -115,7 +123,7 @@ h1,h2,h2 {
 }
 
 .container{
-    overflow: auto;
+    overflow-y: auto;
     background-color:var(--white);
     padding: 30px;
     border-radius: 10px;
@@ -518,6 +526,10 @@ footer{
     /* ********* styling of mutual components ********/
     .btn{
         padding: 8px;
+    }
+    .navigation__link, .navigation__link .fa-leaf{
+        font-size: 1.5rem;
+        
     }
 
     /* ********* homepage ********/

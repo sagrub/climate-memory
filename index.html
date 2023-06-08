@@ -33,21 +33,15 @@
     
     <!-- Start: Header with two navigation icons -->
     <header class="header">
-        <nav>
             <div class="navigation">
-                <div class="navigation__link"> 
-                    <i class="fa-solid fa-leaf">
-                        <a href="index.html" aria-label="Home"> </a>
-
-                    </i>
+                <div><a class="navigation__link" href="index.html" aria-label="Home">  
+                    <i class="fa-solid fa-leaf"></i>
                 </div>
-                <div class="navigation__link">
-                    <i class="fa-brands fa-github">
-                        <a href="https://github.com/brodsa" target="_blank" aria-label="Github profile of the developer will be opened in a new window."></a>
-                    </i>
+                <div>
+                    <h1 class="navigation__link">Climate memory</h1>
                 </div>
+                </a>
             </div>
-        </nav>
     </header>
     <!-- Start: Header with two navigation icons -->
 
@@ -55,18 +49,20 @@
         <!-- Start: Home section -->
         <section class="container container--small">
 
-            <h1 class="container__title">Climate memory</h1>
+            <h2 class="container__title">Welcome to climate memory</h2>
 
             <div class="container__content">
                 <p class="paragraph">
                     The Climate Memory game was developed to raise awareness of the climate change. The game attempts to communicate the facts of the human activities effecting and even destroying our nature, in an entertaining form. 
                 </p>
 
-                <div class="buttons">
-                    <button data-btn="btn-open-how-to" class="btn btn--secondary" aria-label="Navigate to the How to play pop up window">How to play</button>
-                    <button data-btn="btn-open-play" class="btn btn--primary" aria-label="Navigate to the the game and start the game">Start game</button>
-                    <button data-btn="btn-open-story" class="btn btn--secondary" aria-label="Navigate to the Story behind pop up window">Story behind</button>
-                </div>
+                <nav>
+                    <div class="buttons">
+                        <button data-btn="btn-open-how-to" class="btn btn--secondary" aria-label="Navigate to the How to play pop up window">How to play</button>
+                        <button data-btn="btn-open-play" class="btn btn--primary" aria-label="Navigate to the the game and start the game">Start game</button>
+                        <button data-btn="btn-open-story" class="btn btn--secondary" aria-label="Navigate to the Story behind pop up window">Story behind</button>
+                    </div>
+                </nav>
 
                 <p class="paragraph">
                     Feedback is more than welcome! I am also glad to hear about an intersting content, which could be incorporated in the game to help rising the awareness about this topic. 
@@ -83,7 +79,7 @@
         <section class="modal" id="modal-how-to">
             <div class="modal__header">
                 <button data-btn="btn-close" class="btn btn--close">&times;</button>
-                <h2 class="modal__title">How to play</h2>
+                <h3 class="modal__title">How to play</h3>
             </div>
         
             <div class="modal__body">
@@ -111,7 +107,7 @@
         <section class="modal" id="modal-story">
             <div class="modal__header">
                 <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window." >&times;</button>
-                <h2 class="modal__title">Story behind</h2>
+                <h3 class="modal__title">Story behind</h3>
             </div>
         
             <div class="modal__body">
@@ -129,7 +125,7 @@
         <section class="modal" id="modal-contact">
             <div class="modal__header">
                 <button data-btn="btn-close" class="btn btn--close" aria-label="Close the opened window.">&times;</button>
-                <h2 class="modal__title">Get in touch</h2>
+                <h3 class="modal__title">Get in touch</h3>
             </div>
         
             <div class="modal__body">
