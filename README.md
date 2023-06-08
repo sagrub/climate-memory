@@ -73,7 +73,15 @@ The website layout reflects the user stories as well as the components which are
         - The logo of the game navigates the user to homepage (US6).
         - The GitHub icon navigates the user the the GitHub profile of the developer (US5, US6).
 
+    ![Header](./assets/docs/ux/ux_features_header.png)
+
 - **Footer**
+    - The Footer is located at the bottom of the website.
+    - The Footer displays the developer name the link to the GitHub profil.
+
+    ![Footer](./assets/docs/ux/ux_features_footer.png)
+
+### Homepage Featers
 
 
 
