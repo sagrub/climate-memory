@@ -26,10 +26,6 @@ html {
 
 body{
     background: url(../images/background_2000px.webp) no-repeat center center/cover;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;  */
     font-family: 'Hind', sans-serif;
     font-size: 1rem;
     color: var(--black); 
@@ -306,7 +302,6 @@ footer{
 .game{
     display: flex;
     flex-direction: column;
-    /* margin: 5vh auto; */
 }
 
 .game__board{
@@ -588,11 +583,9 @@ footer{
     }
 
     .container--small{
-        /* max-width: 600px; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
         margin: 0 20dvw;
     }
 
