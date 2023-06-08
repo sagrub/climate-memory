@@ -130,10 +130,13 @@ h1,h2,h2 {
 }
 
 .container__game{
-    height: auto;
+    height: 80%;
+    width: 80%;
+    min-height: 0 !important;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 50px;
 }
@@ -517,17 +520,14 @@ footer{
     }
 
     /* ********* homepage ********/
-    .container{
- 
-        
-    }
-
     .container--small{
         margin: 50px;
     }
 
     .container__game{
-   
+        max-width: 600px;
+        max-height: 600px;
+        width: auto;
     }
 
     .container__title{
