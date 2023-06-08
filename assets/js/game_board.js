@@ -237,6 +237,7 @@ function checkCardsMatch(cardContent){
     }else if(parametersGame.firstCard.dataset.key === parametersGame.secondCard.dataset.key){
         showCardsModal(cardContent);
         keepCardsFliped(); 
+        highlightMatchedCards();
         parametersGame.pairFlips++;
     // no match
     }else{
@@ -254,10 +255,16 @@ function checkCardsMatch(cardContent){
  * The function is used in case the is a match.
  */
 function keepCardsFliped(){
-    parametersGame.firstCard.style.transform = "rotateY(180deg) scale(1.05)";
-    parametersGame.secondCard.style.transform = "rotateY(180deg) scale(1.05)";
     parametersGame.firstCard.removeEventListener('click',flipCard);
     parametersGame.secondCard.removeEventListener('click',flipCard);
+}
+
+/**
+ * Increase the size of the matched cards 
+ */
+function highlightMatchedCards(){
+    parametersGame.firstCard.style.transform = "rotateY(180deg) scale(1.05)";
+    parametersGame.secondCard.style.transform = "rotateY(180deg) scale(1.05)";
 }
 
 /**
