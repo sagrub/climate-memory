@@ -1,5 +1,5 @@
 ## Introduction
-The Climate Memory website was created to raise the awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people include our childern.
+The Climate Memory website was created to raise awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people including our children.
 
 The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The content of the flipped card is everytime magnified in order to read the text or see the image properly.
 
@@ -56,22 +56,22 @@ Fonts were selected based on the [fontpair](https://www.fontpair.co/pairings/mon
 - The Hind was take for the body text, such as paragraphs.
 
 ### Colors
-The color pallete was chosen using [coolors](https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c) with a slight modification. The final colors includes the Eerie Black and Alice Blue, see [here](https://coolors.co/201f1f-6b705c-a5a58d-edf6f9-ddbea9-cb997e).
+The color pallete which was chosen is [coolors](https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c), with a slight modification. The final colors includes the Eerie Black and Alice Blue, see [here](https://coolors.co/201f1f-6b705c-a5a58d-edf6f9-ddbea9-cb997e).
 ![Colors](./assets/docs/ux/ux_colors.png)
 
-The chosen colors were evaluated in term of accessibitlity using the [toolnes](https://toolness.github.io/accessible-color-matrix/) tool. The resulting accessible color matrix revealed the following suggested combinations.
+The chosen colors were evaluated in terms of accessibitlity using the [toolnes](https://toolness.github.io/accessible-color-matrix/) tool. The resulting accessible color matrix revealed the following suggested combinations.
 ![Accessible Colors](./assets/docs/ux/ux_colors_accessibility.png)
 
 
 ## Features
-The website layout reflects the user stories as well as the components which are common practice in web design. In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
+The website layout reflects the user stories as well as the components which are common practices in web design. In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
 
 ### Common Features
 - **Header**
     - The Header is located at the top of the website.
     - The Header displays two icons:
-        - The logo of the game navigates the user to homepage (US6).
-        - The GitHub icon navigates the user the the GitHub profile of the developer (US5, US6).
+        - The logo of the game navigates the user to the homepage (US6).
+        - The GitHub icon navigates the user to the GitHub profile of the developer (US5, US6).
 
     ![Header](./assets/docs/ux/ux_features_header.png)
 
@@ -87,7 +87,7 @@ The hompage contains a white board located in the middle of the screen. The boar
 ![Hompage board](./assets/docs/ux/ux_features_homepage_board.png)
 
 The buttons directs the user to other webpage parts:
-- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user a possibility to start playing the game from there, see [How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png).
+- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user the possibility to start playing the game from there, see [How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png).
 - **"Start game"** navigates the user to the game board, which is located in a separeted page, see more Game Board Features Section.
 - **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window, see [Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
 - **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
@@ -99,12 +99,12 @@ The game board is loacated in the middle of the webpage.
 The game board contains the following elements:
 - **Card Board** 
     - The board consists of 6 card pairs leading to the 12 flip cards in total. Each pair is represented by a text and an image card. The image card can be an icon, a figure or an picture. 
-    - The card board is fully built with JavaScript. The data are located in the json file and contains information for 9 card pairs. When the user clicks on Start game, the data card are randomly selected. Thus, the user can play with the different set of cards. 
-    - The user is allowed to click on two cards only. When the user click on a card. The card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card. Four situation can occure:
+    - The card board is fully built with JavaScript. The data are located in the json file and contains information for 9 card pairs. When the user clicks on Start game, the data cards are randomly selected. Thus, the user can play with the different set of cards. 
+    - The user is allowed to click on two cards only. When the user is clicking on a card, the card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card again. Four situations can occure:
         - The card stayes flipped if the card is the first flipped one.
         - The cards flip back in case of no match.
         - The cards stay flipped if they matches.
-        - The card is flip back in case the same card was flipped.
+        - The card is flipped back in case the same card was flipped.
     - Several examples of the flipped card are following:
         - [A text card is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
         - [An image card with an icon is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
@@ -134,19 +134,19 @@ The webpage additionally contains two hidden pages:
 ### Differences to Design
 - Topics: 
     - The initial plan was to have the cards separated into topics, which the user can select. This will be implemented in the next iteration.
-    - Possible solution is mainly to modified the data load in order to generate the cards content. 
-        - The pop up window offering the user to click on different buttons related to the diferent topics.
+    - Possible solution is mainly to modify the data load in order to generate the cards content. 
+        - The pop up window offering the user to click on different buttons related to the different topics.
         - Each topic is related to a separated json file, containing the data to generate the cards.
         - The buttons have the event listener on click firing the load data function. The function received the path to the json file depending on the selected topic. 
-        - This would require to select all buttons with a specific data attribute and to use switch operator to get the correct data, i.e. load correct data. 
+        - This would require to select all buttons with a specific data attribute and to use the `switch` operator to get the correct data, i.e. load correct data. 
 - User Chart or Progress: There are two options. Either to use the [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or the [Google sheets API](https://developers.google.com/sheets/api/quickstart/js).
 
 ### Future Enhancements
 - Additional language could be used to target more users.
-- More topics then intially planed to make the webpage more intersting and to raise the awarness even more.
+- More topics then intially planed to make the webpage more intersting and to raise even more the awareness.
 
 ## Testing
-In generally, the website was continously tested affter implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see the detailed <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>
+In generally, the website was continously tested after implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see the detailed <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>
 
 
 ### Bugs & Issues
