@@ -69,9 +69,7 @@ The website layout reflects the user stories as well as the components which are
 ### Common Features
 - **Header**
     - The Header is located at the top of the website.
-    - The Header displays two icons:
-        - The logo of the game navigates the user to the homepage (US6).
-        - The GitHub icon navigates the user to the GitHub profile of the developer (US5, US6).
+    - The Header displays the logo of the game.
 
     ![Header](./assets/docs/features/features_header.png)
 
@@ -132,14 +130,20 @@ The webpage additionally contains two hidden pages:
 - **404** page is displayed in case of an invalid URL, view [404 Page](./assets/docs/features/features_404.png)
 
 ### Differences to Design
-- Topics: 
-    - The initial plan was to have the cards separated into topics, which the user can select. This will be implemented in the next iteration.
-    - Possible solution is mainly to modify the data load in order to generate the cards content. 
+- **Additional Features**
+    - The Header and Footer components were originally not considered in the design.
+    - The Contact Me modal was added to enable contacting the developer.
+
+- **Not yet implented Features**
+    - **Topics** 
+        - The initial plan was to have the cards separated into topics, which the user can select. This will be implemented in the next iteration.
+        - Possible solution is mainly to modify the data load in order to generate the cards content. 
         - The pop up window offering the user to click on different buttons related to the different topics.
         - Each topic is related to a separated json file, containing the data to generate the cards.
         - The buttons have the event listener on click firing the load data function. The function received the path to the json file depending on the selected topic. 
         - This would require to select all buttons with a specific data attribute and to use the `switch` operator to get the correct data, i.e. load correct data. 
-- User Chart or Progress: There are two options. Either to use the [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or the [Google sheets API](https://developers.google.com/sheets/api/quickstart/js).
+    - **User Chart or Progress**
+        - There are two options to implement this feature in the next iteration. Either to use the [localstorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or the [Google sheets API](https://developers.google.com/sheets/api/quickstart/js).
 
 ### Future Enhancements
 - Additional language could be used to target more users.
@@ -224,6 +228,7 @@ The repository can also be cloned locally, the steps are following:
 - [Formsubmit](https://formsubmit.co/) was used for the form submission.
 - [Mockup Generator](https://techsini.com/multi-mockup/?url=http://www.example.com) was used to generate the mockup for README.
 - [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE) was used to create wireframes.
+- [Markdown Generator](https://tabletomarkdown.com/convert-spreadsheet-to-markdown/)
 
 ## Acknowledgements
-I would like to thank my mentors, Gareth and Daisy McGirr, for their guidance throughout my project and their valuable inputs. I would like to give a mention to a friend of my husband for his time and for giving me valuable feedback on my source code. He has provided me with information about the best practices. And my special thanks go to my husband for being supportive during the development of the webpage.
+I would like to thank my mentors, [Gareth McGirr](https://github.com/Gareth-McGirr) and [Daisy McGirr](https://github.com/Daisy-McG), for their guidance through my project and their valuable inputs. I would like to give a mention to [Lammer Helmuth](https://github.com/lammer-technikum?tab=overview&from=2023-05-01&to=2023-05-31) for his time and for giving me valuable feedback on my source code. He has provided me with information about the best practices. And my special thanks go to my husband for being supportive during the development of the webpage.
