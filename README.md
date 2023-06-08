@@ -150,11 +150,7 @@ The webpage additionally contains two hidden pages:
 - More topics then intially planed to make the webpage more intersting and to raise even more the awareness.
 
 ## Testing
-In generally, the website was continously tested after implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see [the detailed testing report](./README_testing.md).
-
-
-### Bugs & Issues
-Besides the issues reported in [the detailed testing report](./README_testing.md). There were other bugs to fix:
+In generally, the website was continously tested after implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see [the detailed testing report](./README_testing.md). Besides the issues reported in the report, there were other issues to be fixed:
 
 |       Bug & Issue     | Solution |
 | --------------------- | ---------- |
