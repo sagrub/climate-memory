@@ -459,11 +459,21 @@ footer{
 .win-board__header{
     margin: 0 10px;
 }
+.win-board__body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .win-board__body .paragraph{
     margin-bottom: 5px;
 }
 
+.win-board__body .fa-leaf{
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
 
 /* *************************************************/
 /*        MEDIA QUERY min 350px                    */
