@@ -82,17 +82,15 @@ The website layout reflects the user stories as well as the components which are
     ![Footer](./assets/docs/ux/ux_features_footer.png)
 
 ### Homepage Features
-The hompage contains a white board located in the middle of the screen. The board introduces the game and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons. 
+The hompage contains a white board located in the middle of the screen. The board introduces the game and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons.
+
 ![Hompage board](./assets/docs/ux/ux_features_homepage_board.png)
 
 The buttons directs the user to other webpage parts:
-- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user a possibility to start playing the game from there.
-![How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png)
+- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user a possibility to start playing the game from there, see [How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png).
 - **"Start game"** navigates the user to the game board, which is located in a separeted page, see more Game Board Features Section.
-- **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window.
-![Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
-- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information.
-![Contact me](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
+- **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window, see [Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
+- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
 
 ### Game Board Features
 The game board is loacated in the middle of the webpage.
@@ -124,8 +122,13 @@ The game board contains the following elements:
         - **Home Button** navigates the user back to the homepage.
 - **Win Board**
     - When all cards are fliped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
-    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button.
-    ![Win Board](./assets/docs/ux/ux_features_game_board_win_board.png)
+    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button, see [Win Board](./assets/docs/ux/ux_features_game_board_win_board.png)
+
+
+### Hidden Pages
+The webpage additionally contains two hidden pages:
+- **Thank you** page is shown after the form submission.
+- **404** page is displayed in case of an invalid URL.
 
 ## Testing
 
