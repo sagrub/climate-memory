@@ -150,9 +150,11 @@ In generally, the website was continously tested affter implementing a feature o
 
 
 ### Bugs & Issues
+Besides the issues report in the <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>. There were other bugs to fix:
 - text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
 - the blue color of buttons on iphone; specify the color and set webkit
--  Js Validator: missing semicolons and advice to used the dot notation when working with the objects
+- the scroll on does not work on the game board; TODO
+- the user clicks to fast on the card and the content of both card is displayed in the card modal, TODO
 
 ---
 
