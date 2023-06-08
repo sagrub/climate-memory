@@ -73,28 +73,28 @@ The website layout reflects the user stories as well as the components which are
         - The logo of the game navigates the user to the homepage (US6).
         - The GitHub icon navigates the user to the GitHub profile of the developer (US5, US6).
 
-    ![Header](./assets/docs/ux/ux_features_header.png)
+    ![Header](./assets/docs/features/features_header.png)
 
 - **Footer**
     - The Footer is located at the bottom of the website.
     - The Footer displays the developer name the link to the GitHub profil.
 
-    ![Footer](./assets/docs/ux/ux_features_footer.png)
+    ![Footer](./assets/docs/features/features_footer.png)
 
 ### Homepage Features
 The hompage contains a white board located in the middle of the screen. The board introduces the game and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons.
 
-![Hompage board](./assets/docs/ux/ux_features_homepage_board.png)
+![Hompage board](./assets/docs/features/features_homepage_board.png)
 
 The buttons directs the user to other webpage parts:
-- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user the possibility to start playing the game from there, see [How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png).
+- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user the possibility to start playing the game from there, see [How to play Modal](./assets/docs/features/features_homepage_popup_how_to_play.png).
 - **"Start game"** navigates the user to the game board, which is located in a separeted page, see more Game Board Features Section.
-- **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window, see [Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
-- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
+- **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window, see [Story behind Modal](./assets/docs/features/features_homepage_popup_story_behind.png)
+- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/features/features_homepage_popup_contact_me.png)
 
 ### Game Board Features
 The game board is loacated in the middle of the webpage.
-![Game Board](./assets/docs/ux/ux_features_game_board.png)
+![Game Board](./assets/docs/features/features_game_board.png)
 
 The game board contains the following elements:
 - **Card Board** 
@@ -106,11 +106,11 @@ The game board contains the following elements:
         - The cards stay flipped if they matches.
         - The card is flipped back in case the same card was flipped.
     - Several examples of the flipped card are following:
-        - [A text card is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
-        - [An image card with an icon is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
-        - [A image card with a figure is flipped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
-        - [Two cards match](./assets/docs/ux/ux_features_game_board_match.png)
-        - [All matches are founded](./assets/docs/ux/ux_features_game_board_all_matches.png)
+        - [A text card is flipped](./assets/docs/features/features_game_board_fliped_card_text.png)
+        - [An image card with an icon is flipped](./assets/docs/features/features_game_board_fliped_card_img.png)
+        - [A image card with a figure is flipped](./assets/docs/features/features_game_board_fliped_card_figure.png)
+        - [Two cards match](./assets/docs/features/features_game_board_match.png)
+        - [All matches are founded](./assets/docs/features/features_game_board_all_matches.png)
 
 - **Score Board**
     - The score board is shown right after the card board.
@@ -123,7 +123,7 @@ The game board contains the following elements:
         - **Home Button** navigates the user back to the homepage.
 - **Win Board**
     - When all cards are flipped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
-    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button, see [Win Board](./assets/docs/ux/ux_features_game_board_win_board.png)
+    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button, see [Win Board](./assets/docs/features/features_game_board_win_board.png)
 
 
 ### Hidden Pages
