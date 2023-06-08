@@ -148,7 +148,6 @@ h1{
 
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     padding: 50px;
 }
@@ -340,7 +339,6 @@ footer{
     from the websites 
     https://webtips.dev/memory-game-in-javascript?utm_content=cmp-true,
     https://www.youtube.com/watch?v=ZniVgo8U7ek */
-
     width: 3.5rem;
     height: 3.5rem;
     position: relative;
