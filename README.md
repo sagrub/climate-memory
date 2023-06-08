@@ -98,16 +98,16 @@ The game board is loacated in the middle of the webpage.
 
 The game board contains the following elements:
 - **Card Board** 
-    - The board consists of 12 flip cards.
-    - The user can click only on two cards. When the user click on a card. The card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified close, the user has to click on the card. Four situation can occure:
+    - The board consists of 6 card pairs leading to the 12 flip cards in total. Each pair is represented by a text and an image card. The image card can be an icon, a figure or an picture. 
+    - The user is allowed to click on two cards only. When the user click on a card. The card is fliped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card. Four situation can occure:
         - The card stayes fliped if the card is the first fliped one.
         - The cards flip back in case of no match.
         - The cards stay flipped if they matches.
         - The card is flip back in case the same card was fliped.
     - Several examples of the fliped card are following:
         - [A text card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
-        - [An image card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
-        - [A figure card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
+        - [An image card with an icon is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
+        - [A image card with a figure is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
         - [Two cards match](./assets/docs/ux/ux_features_game_board_match.png)
         - [All matches are founded](./assets/docs/ux/ux_features_game_board_all_matches.png)
 
@@ -131,25 +131,7 @@ The webpage additionally contains two hidden pages:
 - **404** page is displayed in case of an invalid URL.
 
 ## Testing
-In generally, the website was continously tested affter implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools.
-
-### HTML 
-- [Homepage](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Findex.html)
-- [Game Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Fgame.html)
-- [404 Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2F404.html)
-- [Thank You Page](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Fthank_you.html)
-
-### CSS
-- [Homepage](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Findex.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- [Game Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Fgame.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- [404 Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2F404.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- [Thank You Page](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbrodsa.github.io%2Fclimate-memory%2Fthank_you.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-
-### Accessibility
-- [Homepage](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/)
-- [Game Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/game.html)
-- [404 Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/404.html)
-- [Thank You Page](https://wave.webaim.org/report#/https://brodsa.github.io/climate-memory/thank_you.html)
+In generally, the website was continously tested affter implementing a feature or styling a component. The main part of testing includes the thorough manual testing as well as webpage validating using existing tools, see the detailed <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>
 
 
 ### Bugs & Issues
