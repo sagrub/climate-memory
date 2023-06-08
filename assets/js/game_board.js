@@ -171,9 +171,10 @@ function flipCard(){
 
 /**
  * Show tha card modal, containing the information from the flip card.
- * Style the card modal depending on the type of card.
+ * Style the card modal depending on the type of card
  */
 function showCardsModal(cardContent){
+    script.makeBackgroundDark(); // freeze the board so that user cannot flip the second card 
     setTimeout(()=>{
         // show the pop up window
         cardsModal.classList.add('active');
@@ -182,10 +183,10 @@ function showCardsModal(cardContent){
         const isText = modalContent.classList.contains('card__txt');
         const classToAdd = isText ? 'card__modal--txt' : 'card__modal--img';
 
+        
         modalContent.classList.add('card__modal--large');
         cardsModal.appendChild(modalContent);
-        cardsModal.classList.add(classToAdd);
-        script.makeBackgroundDark();
+        cardsModal.classList.add(classToAdd); 
 
     },800);
 
