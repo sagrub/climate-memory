@@ -128,8 +128,8 @@ The game board contains the following elements:
 
 ### Hidden Pages
 The webpage additionally contains two hidden pages:
-- **Thank you** page is shown after the form submission.
-- **404** page is displayed in case of an invalid URL.
+- **Thank you** page is shown after the form submission, view [Thank you Page](./assets/docs/features/features_thank_you.png)
+- **404** page is displayed in case of an invalid URL, view [404 Page](./assets/docs/features/features_404.png)
 
 ### Differences to Design
 - Topics: 
