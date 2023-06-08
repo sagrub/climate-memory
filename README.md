@@ -88,13 +88,44 @@ The hompage contains a white board located in the middle of the screen. The boar
 The buttons directs the user to other webpage parts:
 - **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user a possibility to start playing the game from there.
 ![How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png)
-- **"Start game"** navigates the user to the game board, which is located in a separeted page, see more [Game Board Features](#game_board).
+- **"Start game"** navigates the user to the game board, which is located in a separeted page, see more Game Board Features Section.
 - **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window.
 ![Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
-- **"Contact me"** navigates the user to the contact form in the pop up window.
+- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information.
 ![Contact me](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
 
-### Game Board Features {#game_board}
+### Game Board Features
+The game board is loacated in the middle of the webpage.
+![Game Board](./assets/docs/ux/ux_features_game_board.png)
+
+The game board contains the following elements:
+- **Card Board** 
+    - The board consists of 12 flip cards.
+    - The user can click only on two cards. When the user click on a card. The card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified close, the user has to click on the card. Four situation can occure:
+        - The card stayes fliped if the card is the first fliped one.
+        - The cards flip back in case of no match.
+        - The cards stay flipped if they matches.
+        - The card is flip back in case the same card was fliped.
+    - Several examples of the fliped card are following:
+        - [A text card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_text.png)
+        - [An image card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_img.png)
+        - [A figure card is fliped](./assets/docs/ux/ux_features_game_board_fliped_card_figure.png)
+        - [Two cards match](./assets/docs/ux/ux_features_game_board_match.png)
+        - [All matches are founded](./assets/docs/ux/ux_features_game_board_all_matches.png)
+
+- **Score Board**
+    - The score board is shown right after the card board.
+    - The board displays the number of flips and the time spent on playing the game.
+
+- **Navigation Board**
+    - The navigation board is located on the button of the game board.
+    - The board displays two buttons:
+        - **Refresh Button** refreshes the game and the user starts the game from the beginning
+        - **Home Button** navigates the user back to the homepage.
+- **Win Board**
+    - When all cards are fliped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
+    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button.
+    ![Win Board](./assets/docs/ux/ux_features_game_board_win_board.png)
 
 ## Testing
 
