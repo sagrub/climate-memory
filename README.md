@@ -81,9 +81,20 @@ The website layout reflects the user stories as well as the components which are
 
     ![Footer](./assets/docs/ux/ux_features_footer.png)
 
-### Homepage Featers
+### Homepage Features
+The hompage contains a white board located in the middle of the screen. The board introduces the game and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons. 
+![Hompage board](./assets/docs/ux/ux_features_homepage_board.png)
 
+The buttons directs the user to other webpage parts:
+- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user a possibility to start playing the game from there.
+![How to play Modal](./assets/docs/ux/ux_features_homepage_popup_how_to_play.png)
+- **"Start game"** navigates the user to the game board, which is located in a separeted page, see more [Game Board Features](#game_board).
+- **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window.
+![Story behind Modal](./assets/docs/ux/ux_features_homepage_popup_story_behind.png)
+- **"Contact me"** navigates the user to the contact form in the pop up window.
+![Contact me](./assets/docs/ux/ux_features_homepage_popup_contact_me.png)
 
+### Game Board Features {#game_board}
 
 ## Testing
 
