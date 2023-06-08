@@ -24,7 +24,7 @@ const closeModal = () => {
  * Make the bakcground darker, used in case if the popup
  * window gets active.
  */
-const MakeBackgroundDark = () =>{
+const makeBackgroundDark = () =>{
     const overlay = document.querySelector('#overlay');
     overlay.classList.add('active');
 };
@@ -34,7 +34,7 @@ const MakeBackgroundDark = () =>{
  * Put the background into the previous stage, used in case
  * the pop-up window is inactive
  */
-const MakeBackgroundNormal = () => {
+const makeBackgroundNormal = () => {
     const overlay = document.querySelector('#overlay');
     overlay.classList.remove('active');
 };
@@ -50,18 +50,18 @@ const addListenerOnButtons = () => {
             switch(buttonType){
                 case 'btn-open-how-to':
                     openModal('modal-how-to');
-                    MakeBackgroundDark();
+                    makeBackgroundDark();
                     break;
                 case 'btn-open-play':
                     window.location.href = "game.html";
                     break;
                 case 'btn-open-story':
                     openModal('modal-story');
-                    MakeBackgroundDark();
+                    makeBackgroundDark();
                     break;
                 case  'btn-close':
                     closeModal();
-                    MakeBackgroundNormal();
+                    makeBackgroundNormal();
                     break;
                 case  'btn-home':
                     window.location.href = "index.html";
@@ -74,7 +74,7 @@ const addListenerOnButtons = () => {
                     break;
                 case'btn-contact':
                     openModal('modal-contact');
-                    MakeBackgroundDark();
+                    makeBackgroundDark();
                     break;
                 default:
                     console.info('not implemented');
@@ -86,4 +86,4 @@ const addListenerOnButtons = () => {
 
 addListenerOnButtons();
 
-export default {MakeBackgroundDark, MakeBackgroundNormal,addListenerOnButtons};
+export default {makeBackgroundDark, makeBackgroundNormal,addListenerOnButtons};

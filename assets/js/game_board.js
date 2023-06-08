@@ -185,7 +185,7 @@ function showCardsModal(cardContent){
         modalContent.classList.add('card__modal--large');
         cardsModal.appendChild(modalContent);
         cardsModal.classList.add(classToAdd);
-        script.MakeBackgroundDark();
+        script.makeBackgroundDark();
 
     },800);
 
@@ -212,7 +212,7 @@ function closeCardsModal(){
         });
 
         // activate the background again
-        script.MakeBackgroundNormal();
+        script.makeBackgroundNormal();
         // remove the conent of the modal
         cardsModal.innerHTML='';  
         // flip the cards back
@@ -326,7 +326,7 @@ function showWinBoard(){
             winBoard.classList.remove('active');
             // remove the pop up window of the last card
             cardsModal.classList.remove('active');
-            script.MakeBackgroundNormal();
+            script.makeBackgroundNormal();
         },3500);
     }
 }
