@@ -153,7 +153,7 @@ In generally, the website was continously tested after implementing a feature or
 Besides the issues reported in the <a href="https://brodsa.github.io/climate-memory/README_testing.md" target="_blank">testing report </a>. There were other bugs to fix:
 - text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
 - the blue color of buttons on iphone; specify the color and set webkit
-- the scroll on does not work on the game board; TODO
+- the scroll on does not work on the game board; justify-content: center was removed the height, width and max-height with max-width was added on the css class
 - the user clicks to fast on the card and the content of both card is displayed in the card modal; the function to disable clicking on the second card is called before the card modal appears.
 - my mentor pointed out missing the camel case  notation for two functions; corrected 
 ---
