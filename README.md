@@ -32,11 +32,12 @@ The purpose of the game is to communicate the facts about the climate change in 
     - US3: As a first-time visitor, I want to found out interesting information about the climate change.
     - US4: As a first-time visitor, I want to understand the game rules.
     - US5: As a first-time visitor, I want to play the game on my mobile phone. 
+    - US6: As A first-time visitor, I want to easily navigate through the webpage content.
 
 
 - **Returning Visitor Goals**
-    - US6: As a returning visitor, I want to found out more facts about the climate change.
-    - US5: As a returning visitor, I want to suggest the developer to include additional facts or to provide him a feedback.
+    - US7: As a returning visitor, I want to found out more facts about the climate change.
+    - US8: As a returning visitor, I want to suggest the developer to include additional facts or to provide him a feedback.
 
 ### Wireframes
 The wireframes of the website were designed using [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE). 
@@ -48,13 +49,13 @@ Two different layouts were mainly considered:
 
 
 
-## Fonts
+### Fonts
 Fonts were selected based on the [fontpair](https://www.fontpair.co/pairings/montserrat-hind). The fonts were included in the web page via the link tags, which were generated using the [Google Fonts](https://fonts.google.com/).
 
 - The Montserrat was chosen for headings.
 - The Hind was take for the body text, such as paragraphs.
 
-# Colors
+### Colors
 The color pallete was chosen using [coolors](https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c) with a slight modification. The final colors includes the Eerie Black and Alice Blue, see [here](https://coolors.co/201f1f-6b705c-a5a58d-edf6f9-ddbea9-cb997e).
 ![Colors](./assets/docs/ux/ux_colors.png)
 
@@ -64,6 +65,15 @@ The chosen colors were evaluated in term of accessibitlity using the [toolnes](h
 
 ## Features
 The website layout reflects the user stories as well as the components which are common practice in web design. In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
+
+### Common Features
+- **Header**
+    - The Header is located at the top of the website.
+    - The Header displays two icons:
+        - The logo of the game navigates the user to homepage (US6).
+        - The GitHub icon navigates the user the the GitHub profile of the developer (US5, US6).
+
+- **Footer**
 
 
 
