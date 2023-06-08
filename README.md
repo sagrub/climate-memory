@@ -154,7 +154,7 @@ Besides the issues report in the <a href="https://brodsa.github.io/climate-memor
 - text in modal card is sometimes cut off; solution: remove all classes specific to the type of card (i.e. card__modal--txt) after closing the card modal and to read the text properly, make the modal larger
 - the blue color of buttons on iphone; specify the color and set webkit
 - the scroll on does not work on the game board; TODO
-- the user clicks to fast on the card and the content of both card is displayed in the card modal, TODO
+- the user clicks to fast on the card and the content of both card is displayed in the card modal; the function to disable clicking on the second card is called before the card modal appears.
 - my mentor pointed out missing the camel case  notation for two functions; corrected 
 ---
 
