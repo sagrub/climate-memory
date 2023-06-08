@@ -1,5 +1,17 @@
+## Introduction
+The Climate Memory website was created to raise the awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people include our childern.
+
+The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The content of the fliped card is everytime magnified in order to read the text or see the image properly.
+
+The game is particularly for adults or children who can already read. The website could be used at schools for educative purposes as it provides evidence-based facts.
+
+![Mockup](./assets/docs/mockup.png)
+
+Click <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> to view the website and to play the game!
+
+---
+
 ## Table of Contents
-- [Introduction](#introduction)
 - [UX](#ux)
 - [Features](#features)
 - [Testing](#testing)
@@ -9,19 +21,9 @@
 
 ---
 
-## Introduction
-The Climate Memory website was created to raise the awareness of the climate change. The website attempts to present the facts of the human activities effecting the nature and the life of other people include our childern.
-
-
-The website was developed as a memory game with additional features. In contrast to the classical memory game, the user tries to match an image with an corresponding image description. The image can be either a visualization, icon or just a figure. The content of the fliped card is everytime magnified in order to read the text or see the image properly. 
-
-The game is particularly for adults or children who can already read. The website can even be used at schools for educative purposes.
-
-
-Click <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> to play the game!
-
 ## UX
-The purpose of the game is communicate the facts about the climate change in an appealing and user-friedly way. This educative website is responsive so that the user can play the game on various devices.  
+The purpose of the game is to communicate the facts about the climate change in an appealing and user-friedly way. The playing of the game is fun and informative at the same time. Moreover, the game can be played on various devices. 
+
 
 ### User Stories
 - **First-Time User Goals**
@@ -30,38 +32,40 @@ The purpose of the game is communicate the facts about the climate change in an 
     - US3: As a first-time visitor, I want to found out interesting information about the climate change.
     - US4: As a first-time visitor, I want to understand the game rules.
     - US5: As a first-time visitor, I want to play the game on my mobile phone. 
-    - US6: As a first-time visitor, I want to see my progress.
 
 
 - **Returning Visitor Goals**
-    - US7: As a returning visitor, I want to found out more facts about the climate change.
-    - US8: As a returning visitor, I want to suggest the developer including additional facts.
+    - US6: As a returning visitor, I want to found out more facts about the climate change.
+    - US5: As a returning visitor, I want to suggest the developer to include additional facts or to provide him a feedback.
 
 ### Wireframes
-The Wireframes were designed using [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE). 
+The wireframes of the website were designed using [Balsamiq](https://balsamiq.com/wireframes/?gad=1&gclid=CjwKCAjwg-GjBhBnEiwAMUvNW8jCWKFMpgnd5PZlvwNQGIt7xJ05Fes_JeSsBSzyr7ToVpReN5VdOBoC80UQAvD_BwE). 
 Two different layouts were mainly considered: 
 
-- [Desktop Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/images/documentation/ux/ux_wireframe_desktop.png)
+- [Desktop Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/docs/ux/ux_wireframe_desktop.png)
 
-- [Mobile Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/images/documentation/ux/ux_wireframe_mobile.png)
+- [Mobile Wireframe](https://github.com/brodsa/climate-memory/blob/main/assets/docs/ux/ux_wireframe_mobile.png)
 
 
 
 ## Fonts
 Fonts were selected based on the [fontpair](https://www.fontpair.co/pairings/montserrat-hind). The fonts were included in the web page via the link tags, which were generated using the [Google Fonts](https://fonts.google.com/).
 
-- Montserrat was chosen for headings
-- Hind was takein for body text, such as paragraphs
+- The Montserrat was chosen for headings.
+- The Hind was take for the body text, such as paragraphs.
 
 # Colors
 The color pallete was chosen using [coolors](https://coolors.co/palette/cb997e-ddbea9-ffe8d6-b7b7a4-a5a58d-6b705c) with a slight modification. The final colors includes the Eerie Black and Alice Blue, see [here](https://coolors.co/201f1f-6b705c-a5a58d-edf6f9-ddbea9-cb997e).
-![Colors](./assets/images/documentation/ux/ux_colors.png)
+![Colors](./assets/docs/ux/ux_colors.png)
 
 The chosen colors were evaluated in term of accessibitlity using the [toolnes](https://toolness.github.io/accessible-color-matrix/) tool. The resulting accessible color matrix revealed the following suggested combinations.
-![Accessible Colors](./assets/images/documentation/ux/ux_colors_accessibility.png)
+![Accessible Colors](./assets/docs/ux/ux_colors_accessibility.png)
 
 
 ## Features
+The website layout reflects the user stories as well as the components which are common practice in web design. In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
+
+
 
 ## Testing
 
