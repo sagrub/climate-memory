@@ -155,7 +155,7 @@ Besides the issues report in the <a href="https://brodsa.github.io/climate-memor
 - the blue color of buttons on iphone; specify the color and set webkit
 - the scroll on does not work on the game board; TODO
 - the user clicks to fast on the card and the content of both card is displayed in the card modal, TODO
-
+- my mentor pointed out missing the camel notation for two functions; corrected 
 ---
 
 ## Deployment
