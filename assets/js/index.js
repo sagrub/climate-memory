@@ -39,7 +39,10 @@ const makeBackgroundNormal = () => {
     overlay.classList.remove('active');
 };
 
-
+/**
+ * Add event listner on the buttons depending on the their 
+ * data attributes.
+ */
 const addListenerOnButtons = () => {
     const buttons = document.querySelectorAll('button');
 
@@ -86,4 +89,5 @@ const addListenerOnButtons = () => {
 
 addListenerOnButtons();
 
+// export the object for further usage
 export default {makeBackgroundDark, makeBackgroundNormal,addListenerOnButtons};
