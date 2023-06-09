@@ -17,7 +17,7 @@
         "id": 2,
         "img": "./assets/images/game_airplane.webp",
         "img-type": "icon",
-        "text": "Air traveling counts for about 4% of our total climate impact and yet 80% of the world's population have never set foot on an aeroplane.",
+        "text": "Air traveling counts for about 4% of our total climate impact and yet 80% of the world's population have never set foot on an airplane.",
         "alt":"icon of an airplane"
  
     },
@@ -62,7 +62,7 @@
         "id": 8,
         "img": "./assets/images/game_plant.webp",
         "img-type": "icon",
-        "text": "Shifting towards a plant-base diet could save us up to 8 billion tonnes of C02 every year.",
+        "text": "Shifting towards a plant-base diet could save us up to 8 billion tonnes of CO2 every year.",
         "alt":" icon of a hand holding a plant"
     }
     
