@@ -64,7 +64,7 @@ The chosen colors were evaluated in terms of accessibitlity using the [toolnes](
 
 
 ## Features
-The website layout reflects the user stories as well as the components which are common practices in web design. In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
+The website layout reflects the user stories as well as the components or functionality which are common practices in web design, including the responsivness (US5). In addition, the interactive elements were designed to provide the user with a feedback on the conductive activities.  
 
 ### Common Features
 - **Header**
@@ -80,30 +80,30 @@ The website layout reflects the user stories as well as the components which are
     ![Footer](./assets/docs/features/features_footer.png)
 
 ### Homepage Features
-The hompage contains a white board located in the middle of the screen. The board introduces the game and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons.
+The hompage contains a white board located in the middle of the screen. The board introduces the game (US1) and ask the user to contact the developer in order to expand the content of the game. In addition, there are four navigation buttons (US6).
 
 ![Hompage board](./assets/docs/features/features_homepage_board.png)
 
 The buttons directs the user to other webpage parts:
-- **"How to play"** navigates the user to the game instruction. The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user the possibility to start playing the game from there, see [How to play Modal](./assets/docs/features/features_homepage_popup_how_to_play.png).
+- **"How to play"** navigates the user to the game instruction (US4). The information is provided in the pop up window. In the window, there is also the button "Start game", which gives the user the possibility to start playing the game from there, see [How to play Modal](./assets/docs/features/features_homepage_popup_how_to_play.png).
 - **"Start game"** navigates the user to the game board, which is located in a separeted page, see more Game Board Features Section.
 - **"Story behind"** navigates the user to the story behind the game. The story is provided in the pop up window, see [Story behind Modal](./assets/docs/features/features_homepage_popup_story_behind.png)
-- **"Contact me"** navigates the user to the contact form in the pop up window. The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/features/features_homepage_popup_contact_me.png)
+- **"Contact me"** navigates the user to the contact form in the pop up window (US8). The contact form includes buttons for sending and clearing the provided information, see [Contact me Page](./assets/docs/features/features_homepage_popup_contact_me.png)
 
 ### Game Board Features
 The game board is loacated in the middle of the webpage.
 ![Game Board](./assets/docs/features/features_game_board.png)
 
-The game board contains the following elements:
+The game board contains the following static and interactive elements:
 - **Card Board** 
-    - The board consists of 6 card pairs leading to the 12 flip cards in total. Each pair is represented by a text and an image card. The image card can be an icon, a figure or an picture. 
-    - The card board is fully built with JavaScript. The data are located in the json file and contains information for 9 card pairs. When the user clicks on Start game, the data cards are randomly selected. Thus, the user can play with the different set of cards. 
-    - The user is allowed to click on two cards only. When the user is clicking on a card, the card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card again. Four situations can occure:
+    - The board consists of 6 card pairs leading to the 12 flip cards in total. Each pair is represented by a text and an image card. The text was selected by the developer and attemps to present the interesting facts about the climate change (US3). The image card can be an icon, a figure or an picture, which is somehow related to the text. 
+    - The card board is fully built with JavaScript. The data are located in the json file and contains information for 9 card pairs. When the user clicks on Start game, the data cards are randomly selected. Thus, the user can play with the different set of cards (US7). 
+    - The user is allowed to click on two cards only. When the user is clicking on a card, the card is flipped and automatically magnified to read the text and see the image properly. To close the the magnified card, the user has to click on the card again. Four situations can occure (US2):
         - The card stayes flipped if the card is the first flipped one.
         - The cards flip back in case of no match.
         - The cards stay flipped if they matches.
         - The card is flipped back in case the same card was flipped.
-    - Several examples of the flipped card are following:
+    - Several examples of the flipped card are following (US2):
         - [A text card is flipped](./assets/docs/features/features_game_board_fliped_card_text.png)
         - [An image card with an icon is flipped](./assets/docs/features/features_game_board_fliped_card_img.png)
         - [A image card with a figure is flipped](./assets/docs/features/features_game_board_fliped_card_figure.png)
@@ -115,19 +115,26 @@ The game board contains the following elements:
     - The board displays the number of flips and the time spent on playing the game.
 
 - **Navigation Board**
-    - The navigation board is located on the button of the game board.
+    - The navigation board is located on the button of the game board (US6).
     - The board displays two buttons:
         - **Refresh Button** refreshes the game and the user starts the game from the beginning
         - **Home Button** navigates the user back to the homepage.
 - **Win Board**
-    - When all cards are flipped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards.
-    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button, see [Win Board](./assets/docs/features/features_game_board_win_board.png)
+    - When all cards are flipped, the win board pops up. The board shows the logo, the final number of flips and the total time needed to reveal all cards (US2).
+    - The board automatically disappears and the user can start the new game by clicking on the Refresh Button. <img src="./assets/docs/features/features_game_board_win_board.png" width="230" alt="Win Board"/> 
+ 
 
 
 ### Hidden Pages
 The webpage additionally contains two hidden pages:
-- **Thank you** page is shown after the form submission, view [Thank you Page](./assets/docs/features/features_thank_you.png)
-- **404** page is displayed in case of an invalid URL, view [404 Page](./assets/docs/features/features_404.png)
+- **Thank you** page is shown after the form submission.
+- **404** page is displayed in case of an invalid URL.
+
+<p float="left">
+  <img src="./assets/docs/features/features_thank_you.png" width="200" alt="Thank you Page"/>
+  <img src="./assets/docs/features/features_404.png" width="200" alt="404 Page" /> 
+</p>
+
 
 ### Differences to Design
 - **Additional Features**
