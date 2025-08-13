@@ -7,7 +7,7 @@ The game is particularly suitable for adults or children who can already read. T
 
 ![Mockup](./assets/docs/mockup.png)
 
-Click <a href="https://brodsa.github.io/climate-memory/" target="_blank"> here </a> to view the website and to play the game!
+Follow the <a href="https://brodsa.github.io/climate-memory/" target="_blank"> link </a> to view the website and to play the game!
 
 ---
 
